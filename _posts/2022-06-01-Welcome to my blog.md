@@ -1,12 +1,13 @@
 ---
-title: Welcome to my blog
-tags: TeXt
+title: Welcome to my blog - 博客介绍
+tags: Introduce
 ---
 
-<h1 align="center">📔 皓清的Blog</h1>
-<div align="left">
-<p><strong>211硕士研究生，研究方向是嵌入式系统，努力搬砖，准备2022年校招中。<strong></p>
-    </div> 
+
+
+# 📔 皓清的Blog
+
+**211硕士研究生，研究方向是嵌入式系统，努力搬砖，准备2022年校招中。**
 
 
 

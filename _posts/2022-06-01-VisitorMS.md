@@ -55,13 +55,13 @@ Total Symbols:        454
 
 **项目开发具体详细资料，及每一部分开发参考案例、库、手册等，请联系我 970407688@qq.com。**
 
-![image-20220602193113803](/assets/image-20220602193113803.png)
+![image-20220602193113803](./assets/image-20220602193113803.png)
 
 
+
+![image-202206593113803](./screenshot.jpg)
 
 ![image-202206593113803](/screenshot.jpg)
-
-
 
 
 
