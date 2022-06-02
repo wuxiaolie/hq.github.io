@@ -1,6 +1,10 @@
 ---
 title: Welcome to my blog - 博客介绍
 tags: Introduce
+article_header:
+  type: cover
+  image:
+    src: /screenshot.jpg
 ---
 
 
