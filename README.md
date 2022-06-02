@@ -1,119 +1,89 @@
-<h1 align="center">📔 皓清的Git仓库</h1>
-<div align="left">
-<p><strong>211硕士研究生，研究方向是嵌入式系统，努力搬砖，准备2022年校招中。<strong></p>
-    </div> 
+# [TeXt Theme](https://github.com/kitian616/jekyll-TeXt-theme)
 
+[![license](https://img.shields.io/github/license/kitian616/jekyll-TeXt-theme.svg)](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/LICENSE)
+[![Gem Version](https://img.shields.io/gem/v/jekyll-text-theme.svg)](https://github.com/kitian616/jekyll-TeXt-theme/releases)
+[![Travis](https://img.shields.io/travis/kitian616/jekyll-TeXt-theme.svg)](https://travis-ci.org/kitian616/jekyll-TeXt-theme)
+[![Tip Me via PayPal](https://img.shields.io/badge/PayPal-tip%20me-1462ab.svg?logo=paypal)](https://www.paypal.me/kitian616)
+[![Tip Me via Bitcoin](https://img.shields.io/badge/Bitcoin-tip%20me-f7931a.svg?logo=bitcoin)](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/3Fkufxcw2xd8HnaRJBNK4ccdtkUDyyNu4V.jpg)
 
+![TeXt Theme](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.jpg)
 
-#### **🍵 校招岗位**
+![TeXt Theme Details](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-layouts.png)
 
-- *嵌入式Linux软件开发*
-- *嵌入式Linux驱动开发*
+TeXt is a super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
 
+**[Change Log](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/CHANGELOG.md)** | **[中文](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/README-zh.md)**
 
+## Features
 
-#### 👉 **仓库内容**
+- Responsive
+- Semantic HTML
+- Skins
+- Highlight Theme
+- Internationalization
+- Search
+- Table of contents
+- Authors
+- Additional styles (alert, tag, image, icon, button, grid, etc)
+- Extensions (audios, videos, slides, demos)
+- Markdown enhancements ([MathJax](https://www.mathjax.org/), [mermaid](https://mermaidjs.github.io/), [chartjs](http://www.chartjs.org/))
+- Sharing ([AddToAny](https://www.addtoany.com/), [AddThis](https://www.addthis.com/))
+- Comments ([Disqus](https://disqus.com/), [Gitalk](https://gitalk.github.io/), [Valine](https://valine.js.org/en/))
+- Pageview ([LeanCloud](https://leancloud.cn/))
+- Analytics ([Google Analytics](https://analytics.google.com/analytics/web/))
+- RSS ([jekyll-feed](https://github.com/jekyll/jekyll-feed))
 
-***VisitorMS - 访客管理控制系统***
+## Skins
 
-> - 基于树莓派Linux系统开发的访客管理控制应用系统。
-> - 系统既有多种用户身份验证功能，又针对不同身份的用户提供不同的应用功能。
-> - 涉及多线程、多并发、socket编程、数据加密等功能，设备控制部分基于简单工厂模式开发；
-> - 运用ncurses界面库、libcurl网络库、sqlite3数据库、wiringPi驱动库；
-> - 项目还包含MJPG-Streamer开源视频方案、安卓APP开发。
->
+TeXt has 6 built-in skins, you can also set up your own skin.
 
-***Knowledge-Notes - 个人学习笔记***
+| `default` | `dark` | `forest` |
+| --- |  --- | --- |
+| ![Default](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_default.jpg) | ![Dark](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_dark.jpg) | ![Forest](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_forest.jpg) |
 
-> - 保存技术学习过程中的笔记。
-> - 保存技术库、框架、手册等。
-> - 保存其他笔记。
->
+| `ocean` | `chocolate` | `orange` |
+| --- |  --- | --- |
+| ![Ocean](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_ocean.jpg) | ![Chocolate](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_chocolate.jpg) | ![Orange](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_orange.jpg) |
 
-***Daily_Study_Code - 个人代码存档***
+### Highlight Theme
 
-> - 备份日常代码。
-> - 管理日常代码。
+TeXt use [Tomorrow](https://github.com/chriskempson/tomorrow-theme) as the highlight theme.
 
-***Daily_file_backup - 日常文件备份***
+| `tomorrow` | `tomorrow-night` | `tomorrow-night-eighties` | `tomorrow-night-blue` | `tomorrow-night-bright` |
+| --- |  --- | --- | --- |  --- |
+| ![Tomorrow](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow.png) | ![Tomorrow Night](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night.png) | ![Tomorrow Night Eighties](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night-eighties.png) | ![Tomorrow Night Blue](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night-blue.png) | ![Tomorrow Night Bright](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night-bright.png) |
 
-> - 备份日常文件。
+## Documentation
 
+### Start
 
+- [Quick Start](https://tianqi.name/jekyll-TeXt-theme/docs/en/quick-start)
+- [Update from 1.x to 2.x](https://tianqi.name/jekyll-TeXt-theme/docs/en/update-from-1-to-2)
 
-#### :book: **学习格言**
+### Customization
 
-- *书籍是人类进步的阶梯。  -  高尔基*
-- *学知不足，业精于勤。 - 韩愈*
-- *博学之，审问之，慎思之，明辨之，笃行之。 - 《礼记》*
+- [Configuration](https://tianqi.name/jekyll-TeXt-theme/docs/en/configuration)
+- [Navigation](https://tianqi.name/jekyll-TeXt-theme/docs/en/navigation)
+- [Layouts](https://tianqi.name/jekyll-TeXt-theme/docs/en/layouts)
+- [Logo and Favicon](https://tianqi.name/jekyll-TeXt-theme/docs/en/logo-and-favicon)
+- [Authors](https://tianqi.name/jekyll-TeXt-theme/docs/en/authors)
+- [Internationalization](https://tianqi.name/jekyll-TeXt-theme/docs/en/i18n)
 
+### Content
 
+- [Writing Posts](https://tianqi.name/jekyll-TeXt-theme/docs/en/writing-posts)
+- [Additional styles](https://tianqi.name/jekyll-TeXt-theme/docs/en/additional-styles)
+- [Extensions](https://tianqi.name/jekyll-TeXt-theme/docs/en/extensions)
+- [Markdown Enhancements](https://tianqi.name/jekyll-TeXt-theme/docs/en/markdown-enhancements)
 
-#### **🚀 知识技能**
+## Demo Pages
 
-***编程语言***
+| Name | Description |
+| --- | --- |
+| [Home](https://tianqi.name/jekyll-TeXt-theme/test/) | Home page |
+| [Archive](https://tianqi.name/jekyll-TeXt-theme/archive.html) | Archive page |
+| [Layout Examples](https://tianqi.name/jekyll-TeXt-theme/samples.html) | Examples for different layouts |
 
-> - `C / C++ / 汇编  ——  ★★★`
-> - `Makefile & shell & GDB  ——  ★★`
-> - `Java / Python / VB / Git / Matlab  ——  ★`
->
+## License
 
-***工程软件***
-
-> - `LabView & Multisim & AutoCAD & SolidWorks ——  ★★`
-> - `Altium Designer & Proteus  ——  ★`
-
-***知识基础***
-
-> - 计算机操作系统  ——  ★★★
-> - 计算机组成原理  ——  ★★
-> - 计算机网络  ——  ★★
-
-
-
-#### **📝 精品资源**
-
-- ***There's everything you want.***
-
-
-
-#### **📋 仓库迭代**
-
-- ***Accumulate day by day and month by month.***
-
-
-
-#### **🔨 内卷口号**
-
-- ***God helps those who help themselves.***
-
-
-
-#### **🐼 关于皓清**
-
-- ***A xxxxx boy.***
-
-
-
-#### 🍖 **咨询交流**
-
-- ***QQ : 970407688***
-
-
-
-#### **🎅 友情赞助**
-
-- 970407688@qq.com
-
-
-
-#### **🥉 致谢**
-
-- ***Heaven rewards diligence.***
-
-
-
-#### **:orange_book: 勘误与转载**
-
-- ***Welcome. Please leave a message if you have any questions.***
-- ***欢迎光临，~~一键三连~~，给个star！***
+TeXt Theme is [MIT licensed](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/LICENSE).
