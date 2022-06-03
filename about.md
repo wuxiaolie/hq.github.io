@@ -28,9 +28,11 @@ key: page-about
 
 
 
-#### **📝 精品资源**
+#### **📝个人网站**
 
-- ***https://gitee.com/yang-haoqing/***
+- ***个人博客 - https://wuxiaolie.github.io/hq.github.io/***
+- ***Gitee仓库 - https://gitee.com/yang-haoqing/***
+- ***GitHub仓库 - https://github.com/wuxiaolie***
 
 
 
@@ -55,12 +57,13 @@ key: page-about
 #### 🍖 **咨询交流**
 
 - ***QQ : 970407688***
+- ***Email : haoqingboy@163.com***
 
 
 
 #### **🎅 友情赞助**
 
-- 970407688@qq.com
+- ***Alipay : 970407688@qq.com***
 
 
 
@@ -74,6 +77,3 @@ key: page-about
 
 - ***Welcome. Please leave a message if you have any questions.***
 - ***欢迎光临，~~一键三连~~，给个star！***
-
-[![Star This Project](assets/assets.about/jekyll-TeXt-theme.svg+xml)](https://github.com/kitian616/jekyll-TeXt-theme/)
-
