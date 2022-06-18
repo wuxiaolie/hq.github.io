@@ -46,6 +46,16 @@ article_header:
 >
 > - 项目使用make工具进行编译，可自动配置软链接，具体见项目**README**文档。
 
+***[WirelessSersorMS - 无线传感监测系统](https://gitee.com/yang-haoqing/wireless-sersor-ms)***
+
+【[GitHub链接](https://github.com/wuxiaolie/WirelessSersorMS)】  【[Gitee链接](https://gitee.com/yang-haoqing/wireless-sersor-ms)】
+
+> - 系统以Zigbee为通讯协议，基于CC2530开发的协调器和多个终端节点进行组网，并将接收的数据通过串口发送到Linux主控。
+> - 用户可通过Web浏览器访问服务器（主控），实现登录、注册、数据库操作；
+> - 可远程遥控硬件，采集环境信息；还可进行远程监控、拍照，图片显示等功能。
+> - 应用技术：多线程，Zigbee，Web开发(cgi/boa)，驱动开发，多种传感器(ADC/温湿度/烟雾/光感/LCD)。  
+> - 项目使用make工具进行编译，具体见项目**README**文档。
+
 ***[Knowledge-Notes - 个人学习笔记](https://github.com/wuxiaolie/Knowledge-Notes)***
 
 【[GitHub链接](https://github.com/wuxiaolie/Knowledge-Notes)】  【Gitee-不支持图床外链无法公开仓库】
@@ -80,7 +90,7 @@ article_header:
 ***编程语言***
 
 > - `C / C++ / 汇编  ——  ★★★`
-> - `Makefile & shell & GDB  ——  ★★`
+> - `Makefile & shell & (CMake/GCC/GDB/Valgrind/SSH)  ——  ★★`
 > - `Java / Python / VB / Git / Matlab  ——  ★`
 
 ***工程软件***
