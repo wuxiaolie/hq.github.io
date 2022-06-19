@@ -11,15 +11,9 @@ article_header:
 
 **注：项目详细介绍、使用方法，项目结构图、思维导图、开发流程、组织架构等，请点击链接[进入仓库](https://gitee.com/yang-haoqing/visitor-ms)查看**
 
-
-
 ------
 
-[![00ad7a0047bc4b8880d940bdda54ffe2.png](https://img.gejiba.com/images/00ad7a0047bc4b8880d940bdda54ffe2.png)](https://img.gejiba.com/image/RYwaS)
-
-![00ad7a0047bc4b8880d940bdda54ffe2.png](https://img.gejiba.com/images/00ad7a0047bc4b8880d940bdda54ffe2.png)
-
-![image-20220618162536377](assets/assets.README/image-20220618162536377.png)
+![image-20220618162536377](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220618162536377.png)
 
 ## 项目介绍
 
@@ -33,8 +27,6 @@ article_header:
 - 项目还包含MJPG-Streamer开源视频方案、安卓APP开发。
 
 项目使用make工具进行编译，可自动配置软链接，具体见【项目使用】& 【Makefile】。
-
-[![XOh0KS.png](https://s1.ax1x.com/2022/06/18/XOh0KS.png)](https://imgtu.com/i/XOh0KS)
 
 **身份验证方式**：
 
@@ -73,13 +65,13 @@ git@github.com:wuxiaolie/VisitorMS.git
 
 仓库数据统计（不定时更新）
 
-> <img src="assets/assets.README/image-20220618164314316.png" alt="image-20220618164314316" style="zoom:80%;" />
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220618164314316.png" alt="image-20220618164314316" style="zoom:80%;" />
 
 仓库网络图（不定时更新）
 
 ==具体见同一目录下【树莓派项目 - 开发流程 - HQ】文档==
 
-> ![image-20220618163923304](assets/assets.README/image-20220618163923304.png)
+> ![image-20220618163923304](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220618163923304.png)
 
 
 
@@ -118,35 +110,35 @@ Total Symbols:        458
 
 **仓库文件说明**
 
-> ![Snipaste_2022-06-18_17-42-20](assets/assets.README/Snipaste_2022-06-18_17-42-20.png)
+> ![Snipaste_2022-06-18_17-42-20](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/Snipaste_2022-06-18_17-42-20.png)
 
 **项目详细开发流程见同一目录下【树莓派项目 - 开发流程 - HQ】文档**
 
-> <img src="assets/assets.README/image-20220618164611630.png" alt="image-20220618164611630" style="zoom:80%;" />
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220618164611630.png" alt="image-20220618164611630" style="zoom:80%;" />
 
 **项目详细组织架构见同一目录下【树莓派项目 - 组织架构 - HQ】文档**
 
-><img src="assets/assets.README/image-20220618164643904.png" alt="image-20220618164643904" style="zoom:80%;" />
+><img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220618164643904.png" alt="image-20220618164643904" style="zoom:80%;" />
 
 **此外同一目录下还提供系统结构图的源文件**
 
-> ![image-20220602094624280](assets/assets.README/image-20220602094624280.png)
+> ![image-20220602094624280](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220602094624280.png)
 
 **项目开发具体详细资料，及每一部分开发参考案例、实操步骤、库、手册等，请联系我 970407688@qq.com。**
 
-> <img src="assets/assets.README/image-20220618164735235.png" alt="image-20220618164735235" style="zoom:80%;" />
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220618164735235.png" alt="image-20220618164735235" style="zoom:80%;" />
 >
-> ![image-20220618164806225](assets/assets.README/image-20220618164806225.png)
+> ![image-20220618164806225](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220618164806225.png)
 
 ### 项目所需硬件
 
 树莓派 Raspberry Pi 3 Model B v1.2（配摄像头）
 
->![image-20220618170156593](assets/assets.README/image-20220618170156593.png)
+>![image-20220618170156593](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220618170156593.png)
 
 串口模块
 
-> <img src="assets/assets.README/image-20220618170310083.png" alt="image-20220618170310083" style="zoom:67%;" />
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220618170310083.png" alt="image-20220618170310083" style="zoom:67%;" />
 
 语音识别模块
 
@@ -158,17 +150,17 @@ Total Symbols:        458
 >
 > 配套产品信息：YS-V0.7语音识别开发板
 
-><img src="assets/assets.README/image-20220618170327967.png" alt="image-20220618170327967" style="zoom:67%;" />
+><img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220618170327967.png" alt="image-20220618170327967" style="zoom:67%;" />
 >
-><img src="assets/assets.README/image-20220618170344115.png" alt="image-20220618170344115" style="zoom:67%;" />
+><img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220618170344115.png" alt="image-20220618170344115" style="zoom:67%;" />
 
 4路继电器（不限，其他使用PIN口控制的外设都可）
 
-><img src="assets/assets.README/image-20220618170447516.png" alt="image-20220618170447516" style="zoom:67%;" />
+><img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220618170447516.png" alt="image-20220618170447516" style="zoom:67%;" />
 
 接线展示
 
-> <img src="assets/assets.README/image-20220618170718589.png" alt="image-20220618170718589" style="zoom:80%;" />
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220618170718589.png" alt="image-20220618170718589" style="zoom:80%;" />
 
 
 
@@ -196,19 +188,19 @@ Total Symbols:        458
 
 #### 系统程序功能结构图
 
-><img src="assets/assets.README/VisitorMS - 程序结构图.drawio-16539823699051.png" alt="VisitorMS - 程序结构图.drawio" style="zoom: 80%;" />
+><img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/VisitorMS%20-%20%E7%A8%8B%E5%BA%8F%E7%BB%93%E6%9E%84%E5%9B%BE.drawio-16539823699051.png" alt="VisitorMS - 程序结构图.drawio" style="zoom: 80%;" />
 
 #### 系统菜单切换结构图
 
-><img src="assets/assets.README/VisitorMS - 程序执行顺序.drawio-16539823810983.png" alt="VisitorMS - 程序执行顺序.drawio" style="zoom: 80%;" />
+><img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/VisitorMS%20-%20%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F.drawio-16539823810983.png" alt="VisitorMS - 程序执行顺序.drawio" style="zoom: 80%;" />
 
 #### 系统身份验证方式导图
 
-><img src="assets/assets.README/Snipaste_2022-05-31_15-29-16.png" alt="Snipaste_2022-05-31_15-29-16"  />
+><img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/Snipaste_2022-05-31_15-29-16.png" alt="Snipaste_2022-05-31_15-29-16"  />
 
 #### 系统不同用户功能导图
 
-><img src="assets/assets.README/访客管理系统  功能组织架构.png" alt="访客管理系统  功能组织架构"  />
+><img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/%E8%AE%BF%E5%AE%A2%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%20%20%E5%8A%9F%E8%83%BD%E7%BB%84%E7%BB%87%E6%9E%B6%E6%9E%84.png" alt="访客管理系统  功能组织架构"  />
 
 
 
@@ -369,7 +361,7 @@ chmod 777 *.sh
 
 #### 编译过程
 
-><img src="assets/assets.README/image-20220618165512663.png" alt="image-20220618165512663" style="zoom:80%;" />
+><img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220618165512663.png" alt="image-20220618165512663" style="zoom:80%;" />
 
 #### 编译前
 
@@ -619,7 +611,7 @@ pi@raspberrypi:~/raspberry/VisitorMS $ tree
 
 **清理过程**
 
-> <img src="assets/assets.README/image-20220618165711193.png" alt="image-20220618165711193" style="zoom:80%;" />
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220618165711193.png" alt="image-20220618165711193" style="zoom:80%;" />
 
 
 
@@ -646,7 +638,7 @@ pi@raspberrypi:~/raspberry/VisitorMS $ tree
 - 输入5 - 以其他用户身份登录
 - 输入q - 退出系统
 
-> ![image-20220531170254851](assets/assets.README/image-20220531170254851.png)
+> ![image-20220531170254851](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531170254851.png)
 
 **提示界面 - 输入未指定功能的按键**
 
@@ -654,7 +646,7 @@ pi@raspberrypi:~/raspberry/VisitorMS $ tree
 
 - 按任意键返回
 
-> ![image-20220531173453037](assets/assets.README/image-20220531173453037.png)
+> ![image-20220531173453037](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531173453037.png)
 
 
 
@@ -673,7 +665,7 @@ pi@raspberrypi:~/raspberry/VisitorMS $ tree
 - 输入5 - 忘记密码
 - 输入q - 返回开始界面
 
-> ![image-20220531173718910](assets/assets.README/image-20220531173718910.png)
+> ![image-20220531173718910](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531173718910.png)
 
 **提示界面 - 忘记密码**
 
@@ -681,7 +673,7 @@ pi@raspberrypi:~/raspberry/VisitorMS $ tree
 
 - 按任意键返回
 
->![image-20220531204323423](assets/assets.README/image-20220531204323423.png)
+>![image-20220531204323423](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531204323423.png)
 
 **提示界面 - 登录验证失败**
 
@@ -689,7 +681,7 @@ pi@raspberrypi:~/raspberry/VisitorMS $ tree
 
 - 按任意键返回
 
->![image-20220531204352642](assets/assets.README/image-20220531204352642.png)
+>![image-20220531204352642](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531204352642.png)
 
 #### 账号密码验证
 
@@ -700,25 +692,25 @@ pi@raspberrypi:~/raspberry/VisitorMS $ tree
 - 输入账号，然后回车
 - 输入密码，然后回车
 
->![image-20220531204555917](assets/assets.README/image-20220531204555917.png)
+>![image-20220531204555917](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531204555917.png)
 
 验证成功后，提示如下
 
 - 按任意键返回（进入该身份对于的功能选择列表）
 
-> ![image-20220531204821839](assets/assets.README/image-20220531204821839.png)
+> ![image-20220531204821839](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531204821839.png)
 
 如果输入的账号不存在，提示如下
 
 - 按任意键返回
 
-> ![image-20220531205011787](assets/assets.README/image-20220531205011787.png)
+> ![image-20220531205011787](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531205011787.png)
 
 如果输入的账号存在，但是密码不正确，提示如下
 
 - 按任意键返回
 
-> ![image-20220531205125531](assets/assets.README/image-20220531205125531.png)
+> ![image-20220531205125531](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531205125531.png)
 
 #### 人脸识别验证
 
@@ -729,19 +721,19 @@ pi@raspberrypi:~/raspberry/VisitorMS $ tree
 - 根据提示，将自己的照片放到.\src\tmp目录下（相对于VisitorMS系统存放的位置）
 - 输入任意键开始进行识别
 
->![image-20220531205254939](assets/assets.README/image-20220531205254939.png)
+>![image-20220531205254939](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531205254939.png)
 
 识别成功提示界面如下
 
 - 按任意键返回
 
-> ![image-20220531205726915](assets/assets.README/image-20220531205726915.png)
+> ![image-20220531205726915](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531205726915.png)
 
 识别失败提示界面如下
 
 - 按任意键返回
 
->![image-20220618171056985](assets/assets.README/image-20220618171056985.png)
+>![image-20220618171056985](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220618171056985.png)
 
 #### 语音口令验证
 
@@ -752,19 +744,19 @@ pi@raspberrypi:~/raspberry/VisitorMS $ tree
 - 按任意键开始进行语音识别
 - 然后对着语音模块说出识别口令，如”芝麻开门“，语音模块识别到正确口令后，发送特定密钥给系统，系统接收后与本地特定密钥对比相同，则提示识别成功，否则失败
 
->![image-20220531205835826](assets/assets.README/image-20220531205835826.png)
+>![image-20220531205835826](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531205835826.png)
 
 识别成功提示界面如下
 
 - 按任意键返回
 
-><img src="assets/assets.README/image-20220618171206874.png" alt="image-20220618171206874"  />
+><img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220618171206874.png" alt="image-20220618171206874"  />
 
 识别失败提示界面如下，由于树莓派没有连接串口，提示串口打开失败
 
 - 按任意键返回
 
->![image-20220531210011780](assets/assets.README/image-20220531210011780.png)
+>![image-20220531210011780](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531210011780.png)
 
 #### 手机APP验证
 
@@ -774,19 +766,19 @@ pi@raspberrypi:~/raspberry/VisitorMS $ tree
 
 - 按任意键开始进行语音识别
 
->![image-20220531211106325](assets/assets.README/image-20220531211106325.png)
+>![image-20220531211106325](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531211106325.png)
 
 手机app客户端成功连接系统服务端提示如下
 
 - 等待app发送特定密钥（123312）
 
-> ![image-20220531210633318](assets/assets.README/image-20220531210633318.png)
+> ![image-20220531210633318](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531210633318.png)
 
 系统接收到app发送的特定密钥后，提示识别成功
 
 - 按任意键返回
 
->![image-20220531211052856](assets/assets.README/image-20220531211052856.png)
+>![image-20220531211052856](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531211052856.png)
 
 识别失败提示界面（暂无）
 
@@ -796,17 +788,17 @@ pi@raspberrypi:~/raspberry/VisitorMS $ tree
 
 图标
 
->![image-20220618171545784](assets/assets.README/image-20220618171545784.png)
+>![image-20220618171545784](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220618171545784.png)
 
 APP-II 打开提示界面
 
-> <img src="assets/assets.README/Screenshot_20220615_153305_com.example.hq.jpg" alt="Screenshot_20220615_153305_com.example.hq" style="zoom:33%;" />
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/Screenshot_20220615_153305_com.example.hq.jpg" alt="Screenshot_20220615_153305_com.example.hq" style="zoom:33%;" />
 
 APP-I 打开提示界面
 
 - 点击登录账号进行身份验证
 
-> <img src="assets/assets.README/image-20220618172026798.png" alt="image-20220618172026798" style="zoom:67%;" />
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220618172026798.png" alt="image-20220618172026798" style="zoom:67%;" />
 
 
 
@@ -823,7 +815,7 @@ APP-I 打开提示界面
 - 输入3 - 进入聊天室
 - 输入q - 返回用户选择界面
 
-> ![image-20220531172845986](assets/assets.README/image-20220531172845986.png)
+> ![image-20220531172845986](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531172845986.png)
 
 #### User1
 
@@ -839,7 +831,7 @@ APP-I 打开提示界面
 - 输入q - 返回用户选择界面
 - 输入其他按键 - 刷新语音 & 串口 & 网络控制 
 
-> ![image-20220531174859498](assets/assets.README/image-20220531174859498.png)
+> ![image-20220531174859498](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531174859498.png)
 
 #### User2
 
@@ -855,7 +847,7 @@ APP-I 打开提示界面
 - 输入q - 返回用户选择界面
 - 输入其他按键 - 刷新语音 & 串口 & 网络控制 
 
-> ![image-20220531174926618](assets/assets.README/image-20220531174926618.png)
+> ![image-20220531174926618](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531174926618.png)
 
 #### 管理员
 
@@ -872,7 +864,7 @@ APP-I 打开提示界面
 - 输入q - 返回用户选择界面
 - 输入其他按键 - 刷新语音 & 串口 & 网络控制 
 
-> ![image-20220531174952752](assets/assets.README/image-20220531174952752.png)
+> ![image-20220531174952752](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531174952752.png)
 
 #### 其他用户
 
@@ -882,7 +874,7 @@ APP-I 打开提示界面
 - 输入2 - 进入聊天室
 - 输入q - 返回用户选择界面
 
-> ![image-20220531175021118](assets/assets.README/image-20220531175021118.png)
+> ![image-20220531175021118](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531175021118.png)
 
 
 
@@ -896,25 +888,25 @@ APP-I 打开提示界面
 
 - 输入想要注册的账号
 
->![image-20220531211507742](assets/assets.README/image-20220531211507742.png)
+>![image-20220531211507742](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531211507742.png)
 
 输入的账号，与数据库中的账号重复，提示错误
 
 - 按任意键返回
 
-> ![image-20220531211806011](assets/assets.README/image-20220531211806011.png)
+> ![image-20220531211806011](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531211806011.png)
 
 输入的账号可用
 
 - 输入想要注册的密码
 
-> ![image-20220531211852247](assets/assets.README/image-20220531211852247.png)
+> ![image-20220531211852247](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531211852247.png)
 
 账号密码都可用，注册成功
 
 - 按任意键返回
 
-> ![image-20220531211916540](assets/assets.README/image-20220531211916540.png)
+> ![image-20220531211916540](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531211916540.png)
 
 #### 控制设备1
 
@@ -925,36 +917,36 @@ APP-I 打开提示界面
 - 输入3 - 读取设备1当前状态
 - 输入q - 返回上一级
 
->![image-20220531212241414](assets/assets.README/image-20220531212241414.png)
+>![image-20220531212241414](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531212241414.png)
 
 设备1的控制驱动为个人编写，增加了一层选择界面
 
 - 输入0 - 打开设备1
 - 输入1 - 关闭设备1
 
-> <img src="assets/assets.README/image-20220618172557971.png" alt="image-20220618172557971" style="zoom:80%;" />
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220618172557971.png" alt="image-20220618172557971" style="zoom:80%;" />
 
 可通过 `dmesg` 查看内核打印信息
 
-> <img src="assets/assets.README/image-20220618172650114.png" alt="image-20220618172650114" style="zoom:80%;" />
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220618172650114.png" alt="image-20220618172650114" style="zoom:80%;" />
 
 设备1打开成功
 
 - 输入任意键返回
 
-> ![image-20220531212412131](assets/assets.README/image-20220531212412131.png)
+> ![image-20220531212412131](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531212412131.png)
 
 设备1关闭成功
 
 - 输入任意键返回
 
-> ![image-20220531212449187](assets/assets.README/image-20220531212449187.png)
+> ![image-20220531212449187](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531212449187.png)
 
 读取设备当前状态
 
 - 按任意键返回
 
-> ![image-20220531212521139](assets/assets.README/image-20220531212521139.png)
+> ![image-20220531212521139](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531212521139.png)
 
 #### 控制设备2
 
@@ -965,25 +957,25 @@ APP-I 打开提示界面
 - 输入3 - 读取设备1当前状态
 - 输入q - 返回上一级
 
->![image-20220531212619513](assets/assets.README/image-20220531212619513.png)
+>![image-20220531212619513](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531212619513.png)
 
 设备2打开成功
 
 - 输入任意键返回
 
-> ![image-20220531212637472](assets/assets.README/image-20220531212637472.png)
+> ![image-20220531212637472](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531212637472.png)
 
 设备2关闭成功
 
 - 输入任意键返回
 
-> ![image-20220531212649719](assets/assets.README/image-20220531212649719.png)
+> ![image-20220531212649719](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531212649719.png)
 
 读取设备当前状态
 
 - 按任意键返回
 
-> ![image-20220531212704058](assets/assets.README/image-20220531212704058.png)
+> ![image-20220531212704058](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531212704058.png)
 
 #### 控制火灾报警器
 
@@ -994,13 +986,13 @@ APP-I 打开提示界面
 - 输入3 - 读取火灾报警器当前状态
 - 输入q - 返回上一级
 
->![image-20220531212619513](assets/assets.README/image-20220531212619513.png)
+>![image-20220531212619513](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531212619513.png)
 
 火灾报警器默认为开启状态，选择打开后，将提示一直处于开启状态
 
 - 输入任意键返回
 
-> ![image-20220531212913958](assets/assets.README/image-20220531212913958.png)
+> ![image-20220531212913958](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531212913958.png)
 
 火灾报警器关闭成功，提示注意防火
 
@@ -1012,7 +1004,7 @@ APP-I 打开提示界面
 
 - 按任意键返回
 
-> ![image-20220531213046835](assets/assets.README/image-20220531213046835.png)
+> ![image-20220531213046835](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531213046835.png)
 
 #### 控制摄像头
 
@@ -1021,44 +1013,44 @@ APP-I 打开提示界面
 - 打开摄像头
 - 关闭摄像头
 
->![image-20220531213518283](assets/assets.README/image-20220531213518283.png)
+>![image-20220531213518283](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531213518283.png)
 
 选择打开摄像头后，打印如下提示界面
 
 - 输入任意键继续（真正打开摄像头）
 
-> ![image-20220531214348644](assets/assets.README/image-20220531214348644.png)
+> ![image-20220531214348644](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531214348644.png)
 
 成功打开摄像头，输出运行信息
 
 - 进入 `http://192.168.3.143:8080/index.html` 查看摄像头画面
 - 输入 `ctrl + c` 关闭摄像头，返回系统
 
-> ![image-20220531213947923](assets/assets.README/image-20220531213947923.png)
+> ![image-20220531213947923](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531213947923.png)
 
 浏览器进入 `http://192.168.3.143:8080/index.html` 网址，查看摄像头画面
 
->![image-20220531214140778](assets/assets.README/image-20220531214140778.png)
+>![image-20220531214140778](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531214140778.png)
 
 打开APP-II  显示摄像头画面
 
-> <img src="assets/assets.README/Screenshot_20220615_155541_com.example.hq.jpg" alt="Screenshot_20220615_155541_com.example.hq" style="zoom:33%;" />
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/Screenshot_20220615_155541_com.example.hq.jpg" alt="Screenshot_20220615_155541_com.example.hq" style="zoom:33%;" />
 
 打开APP-I 显示摄像头画面，可点击按钮选择功能（需要树莓派运行访客管理系统并打开对应功能才能成功执行）
 
-> <img src="assets/assets.README/Screenshot_20220615_155555_com.example.smarthome.jpg" alt="Screenshot_20220615_155555_com.example.smarthome" style="zoom:33%;" />
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/Screenshot_20220615_155555_com.example.smarthome.jpg" alt="Screenshot_20220615_155555_com.example.smarthome" style="zoom:33%;" />
 
 输入 `ctrl + c` 结束摄像头运行后，打印界面提示关闭成功
 
 - 输入任意键返回
 
-> ![image-20220531214246909](assets/assets.README/image-20220531214246909.png)
+> ![image-20220531214246909](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531214246909.png)
 
 选择关闭摄像头后，打印提示界面如下，提示摄像头已经关闭
 
 - 输入任意键返回
 
-> ![image-20220531214447553](assets/assets.README/image-20220531214447553.png)
+> ![image-20220531214447553](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531214447553.png)
 
 #### 语音控制
 
@@ -1066,13 +1058,13 @@ APP-I 打开提示界面
 
 - 输入任意键返回
 
->![image-20220531214622462](assets/assets.README/image-20220531214622462.png)
+>![image-20220531214622462](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531214622462.png)
 
 连接语音模块后，提示串口打开成功，成功接收指令后界面如下
 
 - 输入任意键返回
 
-> ![image-20220618173329968](assets/assets.README/image-20220618173329968.png)
+> ![image-20220618173329968](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220618173329968.png)
 
 #### 串口控制
 
@@ -1080,13 +1072,13 @@ APP-I 打开提示界面
 
 - 输入任意键返回
 
->![image-20220531214747219](assets/assets.README/image-20220531214747219.png)
+>![image-20220531214747219](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531214747219.png)
 
 连接串口模块后，提示串口打开成功，成功接收指令后界面如下
 
 - 输入任意键返回
 
-> ![image-20220618173057253](assets/assets.README/image-20220618173057253.png)
+> ![image-20220618173057253](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220618173057253.png)
 
 #### 网络控制
 
@@ -1094,7 +1086,7 @@ APP-I 打开提示界面
 
 - 运行客户端连接服务端， `./client 192.168.3.143 8010`
 
->![image-20220531215948639](assets/assets.README/image-20220531215948639.png)
+>![image-20220531215948639](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531215948639.png)
 
 客户端连接成功
 
@@ -1104,13 +1096,13 @@ APP-I 打开提示界面
 - 客户端输入close2 - 系统关闭设备2
 - 输入任意键返回
 
-> ![image-20220531220405627](assets/assets.README/image-20220531220405627.png)
+> ![image-20220531220405627](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531220405627.png)
 
 输入close1，系统成功关闭设备1
 
 - 按任意键返回
 
-> ![image-20220531220525718](assets/assets.README/image-20220531220525718.png)
+> ![image-20220531220525718](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531220525718.png)
 
 返回用户功能选择界面后，此时既可以选择控制设备进行相应的控制，也可以通过客户端发送对应的指令来进行控制。
 
@@ -1118,7 +1110,7 @@ APP-I 打开提示界面
 - 输入q - 返回用户身份选择界面
 - 输入其他按键 - 刷新网络控制
 
-> ![image-20220531220731684](assets/assets.README/image-20220531220731684.png)
+> ![image-20220531220731684](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531220731684.png)
 
 #### 日志传输
 
@@ -1129,13 +1121,13 @@ APP-I 打开提示界面
 - 输入3 - 关闭功能（返回到上一级）
 - 输入q - 返回上一级
 
->![image-20220531220957032](assets/assets.README/image-20220531220957032.png)
+>![image-20220531220957032](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531220957032.png)
 
 选择下载日志功能，打印提示界面
 
 - 输入任意键继续
 
-> ![image-20220531221520271](assets/assets.README/image-20220531221520271.png)
+> ![image-20220531221520271](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531221520271.png)
 
 选择下载日志功能（系统作为服务器，通过其他客户端连接后下载服务端日志）
 
@@ -1149,13 +1141,13 @@ APP-I 打开提示界面
   - 客户端输入`put指令+文件名`，能将客户端上面的某个文件上传到服务端。
 - 输入 `ctrl + c` 返回系统
 
-> ![image-20220531221752506](assets/assets.README/image-20220531221752506.png)
+> ![image-20220531221752506](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531221752506.png)
 
 运行结束后，打印提示界面
 
 - 按任意键返回
 
-> ![image-20220531222417858](assets/assets.README/image-20220531222417858.png)
+> ![image-20220531222417858](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531222417858.png)
 
 ---
 
@@ -1163,7 +1155,7 @@ APP-I 打开提示界面
 
 - 输入任意键继续
 
->![image-20220531222433337](assets/assets.README/image-20220531222433337.png)
+>![image-20220531222433337](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531222433337.png)
 
 选择上传日志功能（系统作为客户端，通过连接其他服务器后上传本地日志）
 
@@ -1177,25 +1169,25 @@ APP-I 打开提示界面
   - 客户端输入`put指令+文件名`，能将客户端上面的某个文件上传到服务端。
 - 输入 `ctrl + c` 返回系统
 
-> ![image-20220531222751342](assets/assets.README/image-20220531222751342.png)
+> ![image-20220531222751342](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531222751342.png)
 
 运行结束后，打印提示界面
 
 - 输入任意键返回
 
-> ![image-20220531221452531](assets/assets.README/image-20220531221452531.png)
+> ![image-20220531221452531](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531221452531.png)
 
 ---
 
 客户端运行界面
 
-> ![image-20220531223119707](assets/assets.README/image-20220531223119707.png)
+> ![image-20220531223119707](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531223119707.png)
 >
-> ![image-20220531223147868](assets/assets.README/image-20220531223147868.png)
+> ![image-20220531223147868](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531223147868.png)
 
 服务端运行界面
 
->![image-20220531223158968](assets/assets.README/image-20220531223158968.png)
+>![image-20220531223158968](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531223158968.png)
 
 #### 聊天室
 
@@ -1203,7 +1195,7 @@ APP-I 打开提示界面
 
 - 输入任意键进入聊天室
 
->![image-20220531223917927](assets/assets.README/image-20220531223917927.png)
+>![image-20220531223917927](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531223917927.png)
 
 进入聊天室后，打印界面如下，注意，目前系统的数据库和聊天室数据库并不互通，这里需要重新注册一个账号
 
@@ -1212,7 +1204,7 @@ APP-I 打开提示界面
 - 输入ctrl + c 退出聊天室
 - 输入0 - 退出聊天室
 
-> ![image-20220531224021635](assets/assets.README/image-20220531224021635.png)
+> ![image-20220531224021635](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531224021635.png)
 
 选择注册账号，注册成功，界面如下
 
@@ -1222,7 +1214,7 @@ APP-I 打开提示界面
 - 输入ctrl + c 退出聊天室
 - 输入0 - 退出聊天室
 
-> ![image-20220531224358084](assets/assets.README/image-20220531224358084.png)
+> ![image-20220531224358084](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531224358084.png)
 
 选择登录账号，登录成功，界面如下
 
@@ -1232,7 +1224,7 @@ APP-I 打开提示界面
 - 输入ctrl + c 退出聊天室
 - 输入0 - 退出聊天室
 
-> ![image-20220531224549091](assets/assets.README/image-20220531224549091.png)
+> ![image-20220531224549091](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531224549091.png)
 
 登录成功后，打印界面如下
 
@@ -1242,7 +1234,7 @@ APP-I 打开提示界面
 - 输入ctrl + c 退出聊天室
 - 输入0 - 退出聊天室
 
-> ![image-20220531224848209](assets/assets.README/image-20220531224848209.png)
+> ![image-20220531224848209](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531224848209.png)
 
 选择公聊，成功发送消息后，界面如下
 
@@ -1251,7 +1243,7 @@ APP-I 打开提示界面
 - 输入ctrl + c 退出聊天室
 - 输入0 - 退出聊天室
 
-> ![image-20220531225016739](assets/assets.README/image-20220531225016739.png)
+> ![image-20220531225016739](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531225016739.png)
 
 选择私聊，成功发送消息后，界面如下
 
@@ -1261,20 +1253,20 @@ APP-I 打开提示界面
 - 输入ctrl + c 退出聊天室
 - 输入0 - 退出聊天室
 
->![image-20220531225256895](assets/assets.README/image-20220531225256895.png)
+>![image-20220531225256895](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531225256895.png)
 
 选择查看当前在线的用户，界面如下
 
 - 输入ctrl + c 退出聊天室
 - 输入0 - 退出聊天室
 
-> ![image-20220531225343756](assets/assets.README/image-20220531225343756.png)
+> ![image-20220531225343756](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531225343756.png)
 
 退出聊天室后，打印界面如下
 
 - 输入任意键返回
 
-> ![image-20220531225421769](assets/assets.README/image-20220531225421769.png)
+> ![image-20220531225421769](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531225421769.png)
 
 #### 贪吃蛇游戏
 
@@ -1287,20 +1279,20 @@ APP-I 打开提示界面
 - 输入5 - 选择开挂模式 - 自动控制蛇吃食物，且允许触碰蛇身，允许掉头
 - 输入q - 返回上一级
 
-> ![image-20220601104917187](assets/assets.README/image-20220601104917187.png)
+> ![image-20220601104917187](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220601104917187.png)
 
 进入贪吃蛇游戏后，界面如下（如果遇到界面乱码情况，调整一下终端的大小即可恢复正常）
 
 - 输入上下左右 - 控制蛇头移动方向
 - 输入q - 退出游戏
 
-> ![image-20220601105251254](assets/assets.README/image-20220601105251254.png)
+> ![image-20220601105251254](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220601105251254.png)
 
 游戏闯关成功，提示界面如下
 
 - 输入q - 退出游戏
 
->![image-20220601105711827](assets/assets.README/image-20220601105711827.png)
+>![image-20220601105711827](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220601105711827.png)
 
 
 
@@ -1827,6 +1819,172 @@ Total Bytes:       276240
 Total Lines:         7742
 Total Symbols:        458
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
