@@ -69,28 +69,6 @@
 
 
 
-#### **🚀 知识技能**
-
-***编程语言***
-
-> - `C / C++ / 汇编  ——  ★★★`
-> - `Makefile & Shell & (CMake/GCC/GDB/Git/Valgrind/SSH)  ——  ★★`
-> - `Java / Python / VB / Matlab  ——  ★`
->
-
-***工程软件***
-
-> - `LabView & Multisim & AutoCAD & SolidWorks ——  ★★`
-> - `Altium Designer & Proteus  ——  ★`
-
-***知识基础***
-
-> - 计算机操作系统  ——  ★★★
-> - 计算机组成原理  ——  ★★★
-> - 计算机网络  ——  ★★★
-
-
-
 #### **📋 版权声明**
 
 - ***仓库内容仅作为学习交流使用，其中部分内容可能来自网络，如涉及作品内容、版权和其它问题，请联系我进行处理，感谢。***
