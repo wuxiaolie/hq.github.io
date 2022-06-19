@@ -1,10 +1,10 @@
 ---
-title: Welcome to my blog - 博客介绍
-tags: Introduce
+title: Welcome to my blog - 个人博客介绍
+tags: HQ-Introduce
 article_header:
   type: cover
   image:
-    src: /10.jpg
+    src: /_photo/9.jpg
 ---
 
 

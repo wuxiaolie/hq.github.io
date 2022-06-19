@@ -1,0 +1,954 @@
+---
+title: VisitorMS - 访客管理控制系统 - 组织架构
+tags: RaspberryPi-project
+article_header:
+  type: cover
+  image:
+    src: /_photo/2.jpg
+---
+
+
+
+**注：项目详细介绍、使用方法，项目结构图、思维导图、开发流程、组织架构等，请点击链接[进入仓库](https://gitee.com/yang-haoqing/visitor-ms)查看**
+
+------
+
+## 整体组织架构
+
+### 第一版 - 2022.5.19
+
+**功能结构图**
+
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/Snipaste_2022-05-19_14-36-12.png" alt="Snipaste_2022-05-19_14-36-12" style="zoom:50%;" />
+
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/Snipaste_2022-05-19_14-36-05.png" alt="Snipaste_2022-05-19_14-36-05" style="zoom:50%;" />
+
+**程序结构图**
+
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/VisitorMS%20-%20%E7%A8%8B%E5%BA%8F%E7%BB%93%E6%9E%84%E5%9B%BE.drawio.png" alt="VisitorMS - 程序结构图.drawio" style="zoom: 33%;" />
+
+**程序执行顺序**
+
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/VisitorMS%20-%20%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F.drawio.png" alt="VisitorMS - 程序执行顺序.drawio" style="zoom:50%;" />
+
+### 第二版 - 2022.5.23
+
+**功能结构图**
+
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/Snipaste_2022-05-23_17-33-09.png" alt="Snipaste_2022-05-23_17-33-09" style="zoom: 50%;" />
+
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/Snipaste_2022-05-23_17-33-30.png" alt="Snipaste_2022-05-23_17-33-30" style="zoom:50%;" />
+
+**程序结构图**
+
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/VisitorMS%20-%20%E7%A8%8B%E5%BA%8F%E7%BB%93%E6%9E%84%E5%9B%BE.drawio-16532985483053.png" alt="VisitorMS - 程序结构图.drawio" style="zoom: 33%;" />
+
+### 第三版 - 2022.5.24
+
+**程序结构图**
+
+><img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/VisitorMS%20-%20%E7%A8%8B%E5%BA%8F%E7%BB%93%E6%9E%84%E5%9B%BE.drawio-16533973899481.png" alt="VisitorMS - 程序结构图.drawio" style="zoom:33%;" />
+>
+><img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/VisitorMS%20-%20%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F.drawio-16533974042763.png" alt="VisitorMS - 程序执行顺序.drawio" style="zoom:33%;" />
+
+**功能结构图**
+
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/Snipaste_2022-05-24_21-01-35.png" alt="Snipaste_2022-05-24_21-01-35" style="zoom: 67%;" />
+>
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/Snipaste_2022-05-24_20-58-42.png" alt="Snipaste_2022-05-24_20-58-42" style="zoom:67%;" />
+
+### 第四版 - 2022.5.28
+
+**程序结构图**
+
+><img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/VisitorMS%20-%20%E7%A8%8B%E5%BA%8F%E7%BB%93%E6%9E%84%E5%9B%BE.drawio-16537480489161.png" alt="VisitorMS - 程序结构图.drawio" style="zoom:33%;" />
+
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/VisitorMS%20-%20%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F.drawio-16537480569903.png" alt="VisitorMS - 程序执行顺序.drawio" style="zoom:33%;" />
+
+**功能结构图**
+
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/Snipaste_2022-05-28_22-26-34.png" alt="Snipaste_2022-05-28_22-26-34" style="zoom: 67%;" />
+
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/%E8%AE%BF%E5%AE%A2%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%20%20%E5%8A%9F%E8%83%BD%E7%BB%84%E7%BB%87%E6%9E%B6%E6%9E%84.png" alt="访客管理系统  功能组织架构" style="zoom: 33%;" />
+
+### 第五版 - 2022.5.31（最新）
+
+**程序结构图**
+
+><img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/VisitorMS%20-%20%E7%A8%8B%E5%BA%8F%E7%BB%93%E6%9E%84%E5%9B%BE.drawio-16539823699051.png" alt="VisitorMS - 程序结构图.drawio" style="zoom: 33%;" />
+>
+><img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/VisitorMS%20-%20%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F.drawio-16539823810983.png" alt="VisitorMS - 程序执行顺序.drawio" style="zoom: 67%;" />
+
+**功能结构图**
+
+><img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/Snipaste_2022-05-31_15-29-16.png" alt="Snipaste_2022-05-31_15-29-16" style="zoom: 67%;" />
+>
+><img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/%E8%AE%BF%E5%AE%A2%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%20%20%E5%8A%9F%E8%83%BD%E7%BB%84%E7%BB%87%E6%9E%B6%E6%9E%84.png" alt="访客管理系统  功能组织架构" style="zoom: 33%;" />
+
+
+
+
+
+## 文件组织架构
+
+### 第六版 - 2022.6.18（最新）
+
+**源代码**
+
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220618160601477.png" alt="image-20220618160601477" style="zoom:67%;" />
+>
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220618160620815.png" alt="image-20220618160620815" style="zoom:67%;" />
+
+```
+pi@raspberrypi:~/raspberry/VisitorMS $ tree
+.
+├── clean_project.sh
+├── make_project.sh
+└── src
+    ├── core
+    │   ├── controlDevice
+    │   │   ├── equipment1.c
+    │   │   ├── equipment2.c
+    │   │   └── fireAlarm.c
+    │   ├── identityRecognition
+    │   │   ├── appRecognition.c
+    │   │   ├── data.c
+    │   │   ├── faceRecognition.c
+    │   │   └── passwordIdentification.c
+    │   ├── inputCommand
+    │   │   ├── socketControl.c
+    │   │   ├── usartControl.c
+    │   │   └── voiceControl.c
+    │   ├── otherFunctions
+    │   │   ├── camera.c
+    │   │   ├── ftp.c
+    │   │   └── snake.c
+    │   └── system
+    │       ├── mainPro.c
+    │       └── menu.c
+    ├── include
+    │   ├── camera.h
+    │   ├── controlDevice.h
+    │   ├── data.h
+    │   ├── ftp.h
+    │   ├── identityRecognition.h
+    │   ├── inputCommand.h
+    │   ├── mainPro.h
+    │   ├── menu.h
+    │   └── snake.h
+    ├── lib
+    │   ├── chat
+    │   │   ├── chat_client
+    │   │   │   ├── include
+    │   │   │   │   └── key.h
+    │   │   │   ├── Makefile
+    │   │   │   ├── obj
+    │   │   │   │   └── Makefile
+    │   │   │   └── src
+    │   │   │       ├── client.c
+    │   │   │       ├── key.c
+    │   │   │       └── Makefile
+    │   │   ├── chat_client_start.sh
+    │   │   ├── chat.h
+    │   │   ├── chat_server
+    │   │   │   ├── include
+    │   │   │   │   ├── data.h
+    │   │   │   │   └── key.h
+    │   │   │   ├── Makefile
+    │   │   │   ├── obj
+    │   │   │   │   └── Makefile
+    │   │   │   └── src
+    │   │   │       ├── data.c
+    │   │   │       ├── key.c
+    │   │   │       ├── Makefile
+    │   │   │       └── server.c
+    │   │   ├── chat_server_start.sh
+    │   │   ├── clean.sh
+    │   │   └── gcc.sh
+    │   ├── drivers
+    │   │   ├── pin4driver2.ko
+    │   │   ├── pin4driver.c
+    │   │   ├── pin4driver.ko
+    │   │   └── pin4driver_start.sh
+    │   ├── ftp
+    │   │   ├── ftp_client.c
+    │   │   ├── ftp_client_start.sh
+    │   │   ├── ftp_server.c
+    │   │   └── ftp_server_start.sh
+    │   ├── libcurl
+    │   │   ├── back_up_photo2.jpg
+    │   │   ├── back_up_photo.jpg
+    │   │   ├── include
+    │   │   │   └── curl
+    │   │   │       ├── curl.h
+    │   │   │       ├── curlver.h
+    │   │   │       ├── easy.h
+    │   │   │       ├── mprintf.h
+    │   │   │       ├── multi.h
+    │   │   │       ├── stdcheaders.h
+    │   │   │       ├── system.h
+    │   │   │       ├── typecheck-gcc.h
+    │   │   │       └── urlapi.h
+    │   │   └── lib
+    │   │       └── libcurl.so.4.6.0
+    │   ├── ncurses
+    │   ├── sqlite3
+    │   └── wiringPi
+    ├── Makefile
+    └── tmp
+        ├── photo2.jpg
+        └── photo.jpg
+
+28 directories, 68 files
+```
+
+**编译**
+
+><img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220618160758043.png" alt="image-20220618160758043" style="zoom:67%;" />
+
+**编译后**
+
+```
+----------------------------------
+pi@raspberrypi:~/raspberry/VisitorMS $ tree
+.
+├── clean_project.sh
+├── make_project.sh
+├── src
+│   ├── core
+│   │   ├── controlDevice
+│   │   │   ├── equipment1.c
+│   │   │   ├── equipment1.o
+│   │   │   ├── equipment2.c
+│   │   │   ├── equipment2.o
+│   │   │   ├── fireAlarm.c
+│   │   │   └── fireAlarm.o
+│   │   ├── identityRecognition
+│   │   │   ├── appRecognition.c
+│   │   │   ├── appRecognition.o
+│   │   │   ├── data.c
+│   │   │   ├── data.o
+│   │   │   ├── faceRecognition.c
+│   │   │   ├── faceRecognition.o
+│   │   │   ├── passwordIdentification.c
+│   │   │   └── passwordIdentification.o
+│   │   ├── inputCommand
+│   │   │   ├── socketControl.c
+│   │   │   ├── socketControl.o
+│   │   │   ├── usartControl.c
+│   │   │   ├── usartControl.o
+│   │   │   ├── voiceControl.c
+│   │   │   └── voiceControl.o
+│   │   ├── otherFunctions
+│   │   │   ├── camera.c
+│   │   │   ├── camera.o
+│   │   │   ├── ftp.c
+│   │   │   ├── ftp.o
+│   │   │   ├── snake.c
+│   │   │   └── snake.o
+│   │   └── system
+│   │       ├── mainPro.c
+│   │       ├── mainPro.o
+│   │       ├── menu.c
+│   │       └── menu.o
+│   ├── include
+│   │   ├── camera.h
+│   │   ├── controlDevice.h
+│   │   ├── data.h
+│   │   ├── ftp.h
+│   │   ├── identityRecognition.h
+│   │   ├── inputCommand.h
+│   │   ├── mainPro.h
+│   │   ├── menu.h
+│   │   └── snake.h
+│   ├── lib
+│   │   ├── chat
+│   │   │   ├── chat_client
+│   │   │   │   ├── bin
+│   │   │   │   ├── include
+│   │   │   │   │   └── key.h
+│   │   │   │   ├── Makefile
+│   │   │   │   ├── obj
+│   │   │   │   │   ├── client.o
+│   │   │   │   │   ├── key.o
+│   │   │   │   │   └── Makefile
+│   │   │   │   └── src
+│   │   │   │       ├── client.c
+│   │   │   │       ├── key.c
+│   │   │   │       └── Makefile
+│   │   │   ├── chat_client_start.sh
+│   │   │   ├── chat.h
+│   │   │   ├── chat_server
+│   │   │   │   ├── bin
+│   │   │   │   ├── include
+│   │   │   │   │   ├── data.h
+│   │   │   │   │   └── key.h
+│   │   │   │   ├── Makefile
+│   │   │   │   ├── obj
+│   │   │   │   │   ├── data.o
+│   │   │   │   │   ├── key.o
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   └── server.o
+│   │   │   │   └── src
+│   │   │   │       ├── data.c
+│   │   │   │       ├── key.c
+│   │   │   │       ├── Makefile
+│   │   │   │       └── server.c
+│   │   │   ├── chat_server_start.sh
+│   │   │   ├── clean.sh
+│   │   │   ├── client
+│   │   │   ├── gcc.sh
+│   │   │   └── server
+│   │   ├── drivers
+│   │   │   ├── pin4driver
+│   │   │   ├── pin4driver2.ko
+│   │   │   ├── pin4driver.c
+│   │   │   ├── pin4driver.ko
+│   │   │   └── pin4driver_start.sh
+│   │   ├── ftp
+│   │   │   ├── client
+│   │   │   ├── ftp_client.c
+│   │   │   ├── ftp_client_start.sh
+│   │   │   ├── ftp_server.c
+│   │   │   ├── ftp_server_start.sh
+│   │   │   └── server
+│   │   ├── libcurl
+│   │   │   ├── back_up_photo2.jpg
+│   │   │   ├── back_up_photo.jpg
+│   │   │   ├── include
+│   │   │   │   └── curl
+│   │   │   │       ├── curl.h
+│   │   │   │       ├── curlver.h
+│   │   │   │       ├── easy.h
+│   │   │   │       ├── mprintf.h
+│   │   │   │       ├── multi.h
+│   │   │   │       ├── stdcheaders.h
+│   │   │   │       ├── system.h
+│   │   │   │       ├── typecheck-gcc.h
+│   │   │   │       └── urlapi.h
+│   │   │   └── lib
+│   │   │       ├── libcurl.so -> libcurl.so.4.6.0
+│   │   │       ├── libcurl.so.4 -> libcurl.so.4.6.0
+│   │   │       └── libcurl.so.4.6.0
+│   │   ├── ncurses
+│   │   ├── sqlite3
+│   │   └── wiringPi
+│   ├── Makefile
+│   └── tmp
+│       ├── photo2.jpg
+│       └── photo.jpg
+└── VisitorMS
+
+30 directories, 96 files
+```
+
+### 第五版 - 2022.5.31
+
+**源代码**
+
+><img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531153911044.png" alt="image-20220531153911044" style="zoom:67%;" />
+>
+><img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531153929711.png" alt="image-20220531153929711" style="zoom:67%;" />
+
+```
+pi@raspberrypi:~/raspberry/VisitorMS $ tree
+.
+├── clean_project.sh
+├── make_project.sh
+├── README.md
+└── src
+    ├── core
+    │   ├── controlDevice
+    │   │   ├── equipment1.c
+    │   │   ├── equipment2.c
+    │   │   └── fireAlarm.c
+    │   ├── identityRecognition
+    │   │   ├── appRecognition.c
+    │   │   ├── data.c
+    │   │   ├── faceRecognition.c
+    │   │   └── passwordIdentification.c
+    │   ├── inputCommand
+    │   │   ├── socketControl.c
+    │   │   ├── usartControl.c
+    │   │   └── voiceControl.c
+    │   ├── otherFunctions
+    │   │   ├── camera.c
+    │   │   ├── ftp.c
+    │   │   └── snake.c
+    │   └── system
+    │       ├── mainPro.c
+    │       └── menu.c
+    ├── include
+    │   ├── camera.h
+    │   ├── controlDevice.h
+    │   ├── data.h
+    │   ├── ftp.h
+    │   ├── identityRecognition.h
+    │   ├── inputCommand.h
+    │   ├── mainPro.h
+    │   ├── menu.h
+    │   └── snake.h
+    ├── lib
+    │   ├── chat
+    │   │   ├── chat_client
+    │   │   │   ├── include
+    │   │   │   │   └── key.h
+    │   │   │   ├── Makefile
+    │   │   │   ├── obj
+    │   │   │   │   └── Makefile
+    │   │   │   └── src
+    │   │   │       ├── client.c
+    │   │   │       ├── key.c
+    │   │   │       └── Makefile
+    │   │   ├── chat_client_start.sh
+    │   │   ├── chat.h
+    │   │   ├── chat_server
+    │   │   │   ├── include
+    │   │   │   │   ├── data.h
+    │   │   │   │   └── key.h
+    │   │   │   ├── Makefile
+    │   │   │   ├── obj
+    │   │   │   │   └── Makefile
+    │   │   │   └── src
+    │   │   │       ├── data.c
+    │   │   │       ├── key.c
+    │   │   │       ├── Makefile
+    │   │   │       └── server.c
+    │   │   ├── chat_server_start.sh
+    │   │   ├── clean.sh
+    │   │   └── gcc.sh
+    │   ├── ftp
+    │   │   ├── ftp_client.c
+    │   │   ├── ftp_client_start.sh
+    │   │   ├── ftp_server.c
+    │   │   └── ftp_server_start.sh
+    │   ├── libcurl
+    │   │   ├── back_up_photo2.jpg
+    │   │   ├── back_up_photo.jpg
+    │   │   ├── include
+    │   │   │   └── curl
+    │   │   │       ├── curl.h
+    │   │   │       ├── curlver.h
+    │   │   │       ├── easy.h
+    │   │   │       ├── mprintf.h
+    │   │   │       ├── multi.h
+    │   │   │       ├── stdcheaders.h
+    │   │   │       ├── system.h
+    │   │   │       ├── typecheck-gcc.h
+    │   │   │       └── urlapi.h
+    │   │   └── lib
+    │   │       ├── libcurl.so -> libcurl.so.4.6.0
+    │   │       ├── libcurl.so.4 -> libcurl.so.4.6.0
+    │   │       └── libcurl.so.4.6.0
+    │   ├── ncurses
+    │   ├── sqlite3
+    │   └── wiringPi
+    ├── Makefile
+    └── tmp
+        ├── photo2.jpg
+        └── photo.jpg
+
+27 directories, 67 files
+```
+
+**编译**
+
+><img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220531154102521.png" alt="image-20220531154102521" style="zoom:67%;" />
+
+**编译后**
+
+```
+pi@raspberrypi:~/raspberry/VisitorMS $ tree
+.
+├── clean_project.sh
+├── make_project.sh
+├── README.md
+├── src
+│   ├── core
+│   │   ├── controlDevice
+│   │   │   ├── equipment1.c
+│   │   │   ├── equipment1.o
+│   │   │   ├── equipment2.c
+│   │   │   ├── equipment2.o
+│   │   │   ├── fireAlarm.c
+│   │   │   └── fireAlarm.o
+│   │   ├── identityRecognition
+│   │   │   ├── appRecognition.c
+│   │   │   ├── appRecognition.o
+│   │   │   ├── data.c
+│   │   │   ├── data.o
+│   │   │   ├── faceRecognition.c
+│   │   │   ├── faceRecognition.o
+│   │   │   ├── passwordIdentification.c
+│   │   │   └── passwordIdentification.o
+│   │   ├── inputCommand
+│   │   │   ├── socketControl.c
+│   │   │   ├── socketControl.o
+│   │   │   ├── usartControl.c
+│   │   │   ├── usartControl.o
+│   │   │   ├── voiceControl.c
+│   │   │   └── voiceControl.o
+│   │   ├── otherFunctions
+│   │   │   ├── camera.c
+│   │   │   ├── camera.o
+│   │   │   ├── ftp.c
+│   │   │   ├── ftp.o
+│   │   │   ├── snake.c
+│   │   │   └── snake.o
+│   │   └── system
+│   │       ├── mainPro.c
+│   │       ├── mainPro.o
+│   │       ├── menu.c
+│   │       └── menu.o
+│   ├── include
+│   │   ├── camera.h
+│   │   ├── controlDevice.h
+│   │   ├── data.h
+│   │   ├── ftp.h
+│   │   ├── identityRecognition.h
+│   │   ├── inputCommand.h
+│   │   ├── mainPro.h
+│   │   ├── menu.h
+│   │   └── snake.h
+│   ├── lib
+│   │   ├── chat
+│   │   │   ├── chat_client
+│   │   │   │   ├── bin
+│   │   │   │   ├── include
+│   │   │   │   │   └── key.h
+│   │   │   │   ├── Makefile
+│   │   │   │   ├── obj
+│   │   │   │   │   ├── client.o
+│   │   │   │   │   ├── key.o
+│   │   │   │   │   └── Makefile
+│   │   │   │   └── src
+│   │   │   │       ├── client.c
+│   │   │   │       ├── key.c
+│   │   │   │       └── Makefile
+│   │   │   ├── chat_client_start.sh
+│   │   │   ├── chat.h
+│   │   │   ├── chat_server
+│   │   │   │   ├── bin
+│   │   │   │   ├── include
+│   │   │   │   │   ├── data.h
+│   │   │   │   │   └── key.h
+│   │   │   │   ├── Makefile
+│   │   │   │   ├── obj
+│   │   │   │   │   ├── data.o
+│   │   │   │   │   ├── key.o
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   └── server.o
+│   │   │   │   └── src
+│   │   │   │       ├── data.c
+│   │   │   │       ├── key.c
+│   │   │   │       ├── Makefile
+│   │   │   │       └── server.c
+│   │   │   ├── chat_server_start.sh
+│   │   │   ├── clean.sh
+│   │   │   ├── client
+│   │   │   ├── gcc.sh
+│   │   │   └── server
+│   │   ├── ftp
+│   │   │   ├── client
+│   │   │   ├── ftp_client.c
+│   │   │   ├── ftp_client_start.sh
+│   │   │   ├── ftp_server.c
+│   │   │   ├── ftp_server_start.sh
+│   │   │   └── server
+│   │   ├── libcurl
+│   │   │   ├── back_up_photo2.jpg
+│   │   │   ├── back_up_photo.jpg
+│   │   │   ├── include
+│   │   │   │   └── curl
+│   │   │   │       ├── curl.h
+│   │   │   │       ├── curlver.h
+│   │   │   │       ├── easy.h
+│   │   │   │       ├── mprintf.h
+│   │   │   │       ├── multi.h
+│   │   │   │       ├── stdcheaders.h
+│   │   │   │       ├── system.h
+│   │   │   │       ├── typecheck-gcc.h
+│   │   │   │       └── urlapi.h
+│   │   │   └── lib
+│   │   │       ├── libcurl.so -> libcurl.so.4.6.0
+│   │   │       ├── libcurl.so.4 -> libcurl.so.4.6.0
+│   │   │       └── libcurl.so.4.6.0
+│   │   ├── ncurses
+│   │   ├── sqlite3
+│   │   └── wiringPi
+│   ├── Makefile
+│   └── tmp
+│       ├── photo2.jpg
+│       └── photo.jpg
+└── VisitorMS
+
+29 directories, 92 files
+
+```
+
+### 第三版 - 2022.5.24
+
+**源代码**
+
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220524210513658.png" alt="image-20220524210513658" style="zoom:50%;" />
+
+**编译**
+
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220524210614839.png" alt="image-20220524210614839" style="zoom:67%;" />
+
+**编译后**
+
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220524210702499.png" alt="image-20220524210702499" style="zoom:67%;" />
+
+
+
+
+
+## 参考资料
+
+### 参考LWIP文件组织架构
+
+> ![image-20220508194044646](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220508194044646.png)
+
+### 参考书籍
+
+【【正点原子】I.MX6U 嵌入式 Linux C 应用编程指南 V1.3】
+
+### 参考博文
+
+【一口Linux公众号 - chat聊天室项目】
+
+### 参考课程 
+
+【上官可编程嵌入式Linux树莓派课程】
+
+> ![image-20220406172224049](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220406172224049.png)
+>
+> ![image-20220406172158665](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220406172158665.png)
+>
+> ![image-20220406172135263](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220406172135263.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
