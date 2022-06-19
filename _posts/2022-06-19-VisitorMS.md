@@ -15,7 +15,7 @@ article_header:
 
 ![image-20220618162536377](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220618162536377.png)
 
-### 项目博文（个人博客）
+## 项目博文（个人博客）
 
 **VisitorMS系列文章**
 
@@ -105,7 +105,7 @@ git@github.com:wuxiaolie/VisitorMS.git
 
 仓库网络图（不定时更新）
 
-==具体见同一目录下【树莓派项目 - 开发流程 - HQ】文档 & 博文【[VisitorMS - 访客管理控制系统 - 搭建流程](https://wuxiaolie.github.io/hq.github.io/2022/06/17/VisitorMS.html)】==
+**具体见同一目录下【树莓派项目 - 开发流程 - HQ】文档 & 博文【[VisitorMS - 访客管理控制系统 - 搭建流程](https://wuxiaolie.github.io/hq.github.io/2022/06/17/VisitorMS.html)】**
 
 > ![image-20220618163923304](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220618163923304.png)
 
@@ -204,7 +204,7 @@ Total Symbols:        458
 
 ## 项目待完善部分
 
-==具体见同一目录下【树莓派项目 - 开发流程 - HQ】文档 & 博文【[VisitorMS - 访客管理控制系统 - 待完善内容](https://wuxiaolie.github.io/hq.github.io/2022/06/17/VisitorMS.html)】==
+**具体见同一目录下【树莓派项目 - 开发流程 - HQ】文档 & 博文【[VisitorMS - 访客管理控制系统 - 待完善内容](https://wuxiaolie.github.io/hq.github.io/2022/06/17/VisitorMS.html)】**
 
 | 定位       | 需要解决的Bug                                |
 | ---------- | -------------------------------------------- |
