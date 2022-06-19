@@ -1,6 +1,6 @@
 ---
 title: VisitorMS - 访客管理控制系统
-tags: Project
+tags: RaspberryPi-project
 article_header:
   type: cover
   image:

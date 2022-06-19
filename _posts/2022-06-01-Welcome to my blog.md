@@ -4,7 +4,7 @@ tags: Introduce
 article_header:
   type: cover
   image:
-    src: /screenshot.jpg
+    src: /10.jpg
 ---
 
 
@@ -25,7 +25,7 @@ article_header:
 
 - 终于在研一时，决定放下手中的笔，与时俱进，使用Blog整理知识，也记录生活。
 
-**由于在不断的学习成长，整理的知识笔记也在不断的更新更改，目前自己的所有笔记只同步到了Git仓库。**
+**由于在不断的学习成长，整理的知识笔记也在不断的更新更改，目前自己的所有笔记都同步到了Git仓库。**
 
 **有需要的可以去仓库查看和pull，未来会不定时的更新【知识干货】 & 【个人项目】 & 【技术博文】到这个网站。**
 
@@ -108,8 +108,8 @@ article_header:
 
 #### **📝个人网站**
 
-- ***个人博客 - https://wuxiaolie.github.io/hq.github.io/***
-- ***CSDN博客 - https://blog.csdn.net/weixin_45346142***
+- ***个人博客 - https://wuxiaolie.github.io/hq.github.io/（不定时更新）***
+- ***CSDN博客 - https://blog.csdn.net/weixin_45346142（不再更新）***
 - ***Gitee仓库 - https://gitee.com/yang-haoqing/***
 - ***GitHub仓库 - https://github.com/wuxiaolie***
 
