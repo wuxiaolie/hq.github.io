@@ -4,7 +4,7 @@ tags: RaspberryPi-use
 article_header:
   type: cover
   image:
-    src: /12.png
+    src: https://photo-hq.oss-cn-hangzhou.aliyuncs.com/cover/12.png
 ---
 
 

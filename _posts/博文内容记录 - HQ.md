@@ -51,7 +51,7 @@ tags: HQ-Introduce
 article_header:
   type: cover
   image:
-    src: /9.jpg
+    src: https://photo-hq.oss-cn-hangzhou.aliyuncs.com/cover/1.jpg
 ```
 
 

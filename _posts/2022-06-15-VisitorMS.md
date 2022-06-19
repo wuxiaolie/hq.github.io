@@ -4,7 +4,7 @@ tags: RaspberryPi-project
 article_header:
   type: cover
   image:
-    src: /20.png
+    src: https://photo-hq.oss-cn-hangzhou.aliyuncs.com/cover/20.png
 ---
 
 
