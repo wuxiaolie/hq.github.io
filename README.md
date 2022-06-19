@@ -1,89 +1,135 @@
-# [TeXt Theme](https://github.com/kitian616/jekyll-TeXt-theme)
+<h1 align="center">📔 皓清的Git仓库</h1>
+<div align="left">
+<p><strong>Linux技术爱好者，天道酬勤，厚积薄发。<strong></p>
+    </div> 
 
-[![license](https://img.shields.io/github/license/kitian616/jekyll-TeXt-theme.svg)](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/LICENSE)
-[![Gem Version](https://img.shields.io/gem/v/jekyll-text-theme.svg)](https://github.com/kitian616/jekyll-TeXt-theme/releases)
-[![Travis](https://img.shields.io/travis/kitian616/jekyll-TeXt-theme.svg)](https://travis-ci.org/kitian616/jekyll-TeXt-theme)
-[![Tip Me via PayPal](https://img.shields.io/badge/PayPal-tip%20me-1462ab.svg?logo=paypal)](https://www.paypal.me/kitian616)
-[![Tip Me via Bitcoin](https://img.shields.io/badge/Bitcoin-tip%20me-f7931a.svg?logo=bitcoin)](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/3Fkufxcw2xd8HnaRJBNK4ccdtkUDyyNu4V.jpg)
 
-![TeXt Theme](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.jpg)
 
-![TeXt Theme Details](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-layouts.png)
+#### **📝个人网站**
 
-TeXt is a super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
+- ***[个人博客 - https://wuxiaolie.github.io/hq.github.io/](https://wuxiaolie.github.io/hq.github.io/)（干货满满，欢迎访问）***
+- ***[Gitee仓库 - https://gitee.com/yang-haoqing/](https://gitee.com/yang-haoqing/)***
+- ***[GitHub仓库 - https://github.com/wuxiaolie/](https://github.com/wuxiaolie/)***
 
-**[Change Log](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/CHANGELOG.md)** | **[中文](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/README-zh.md)**
 
-## Features
 
-- Responsive
-- Semantic HTML
-- Skins
-- Highlight Theme
-- Internationalization
-- Search
-- Table of contents
-- Authors
-- Additional styles (alert, tag, image, icon, button, grid, etc)
-- Extensions (audios, videos, slides, demos)
-- Markdown enhancements ([MathJax](https://www.mathjax.org/), [mermaid](https://mermaidjs.github.io/), [chartjs](http://www.chartjs.org/))
-- Sharing ([AddToAny](https://www.addtoany.com/), [AddThis](https://www.addthis.com/))
-- Comments ([Disqus](https://disqus.com/), [Gitalk](https://gitalk.github.io/), [Valine](https://valine.js.org/en/))
-- Pageview ([LeanCloud](https://leancloud.cn/))
-- Analytics ([Google Analytics](https://analytics.google.com/analytics/web/))
-- RSS ([jekyll-feed](https://github.com/jekyll/jekyll-feed))
+#### 👉 **仓库内容**
 
-## Skins
+***[VisitorMS - 访客管理控制系统](https://gitee.com/yang-haoqing/visitor-ms)***
 
-TeXt has 6 built-in skins, you can also set up your own skin.
+【[GitHub链接](https://github.com/wuxiaolie/VisitorMS)】  【[Gitee链接](https://gitee.com/yang-haoqing/visitor-ms)】
 
-| `default` | `dark` | `forest` |
-| --- |  --- | --- |
-| ![Default](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_default.jpg) | ![Dark](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_dark.jpg) | ![Forest](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_forest.jpg) |
+> - 基于树莓派Linux系统开发的访客管理控制系统。
+> - 系统既有多种用户身份验证功能，又针对不同身份的用户提供不同的应用控制功能。
+> - 涉及多线程、多并发，socket编程，数据库，通讯加密，驱动开发等；
+> - 其中设备控制部分采用简单工厂模式开发，可扩展性强；
+> - 运用ncurses界面库、libcurl网络库、sqlite3数据库，以及wiringPi驱动库；
+> - 项目还包含MJPG-Streamer开源视频方案、安卓APP开发。
+>
+> - 项目使用make工具进行编译，可自动配置软链接，具体见项目**README**文档。
+>
 
-| `ocean` | `chocolate` | `orange` |
-| --- |  --- | --- |
-| ![Ocean](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_ocean.jpg) | ![Chocolate](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_chocolate.jpg) | ![Orange](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_orange.jpg) |
+***[WirelessSersorMS - 无线传感监测系统](https://gitee.com/yang-haoqing/wireless-sersor-ms)***
 
-### Highlight Theme
+【[GitHub链接](https://github.com/wuxiaolie/WirelessSersorMS)】  【[Gitee链接](https://gitee.com/yang-haoqing/wireless-sersor-ms)】
 
-TeXt use [Tomorrow](https://github.com/chriskempson/tomorrow-theme) as the highlight theme.
+> - 系统以Zigbee为通讯协议，基于CC2530开发的协调器和多个终端节点进行组网，并将接收的数据通过串口发送到Linux主控。
+> - 用户可通过Web浏览器访问服务器（主控），实现登录、注册、数据库操作；
+> - 可远程遥控硬件，采集环境信息；还可进行远程监控、拍照，图片显示等功能。
+> - 应用技术：多线程，Zigbee，Web开发(cgi/boa)，驱动开发，多种传感器(ADC/温湿度/烟雾/光感/LCD)。  
+> - 项目使用make工具进行编译，具体见项目**README**文档。
 
-| `tomorrow` | `tomorrow-night` | `tomorrow-night-eighties` | `tomorrow-night-blue` | `tomorrow-night-bright` |
-| --- |  --- | --- | --- |  --- |
-| ![Tomorrow](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow.png) | ![Tomorrow Night](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night.png) | ![Tomorrow Night Eighties](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night-eighties.png) | ![Tomorrow Night Blue](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night-blue.png) | ![Tomorrow Night Bright](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night-bright.png) |
+***[Knowledge-Notes - 个人学习笔记](https://github.com/wuxiaolie/Knowledge-Notes)***
 
-## Documentation
+【[GitHub链接](https://github.com/wuxiaolie/Knowledge-Notes)】  【Gitee-不支持图床外链无法公开仓库】
 
-### Start
+> - 开放个人技术学习过程中整理记录的所有笔记。
+> - 包含C/C++，算法，Linux基础，Linux驱动，STM32+RTOS；
+> - 嵌入式，总线协议，操作系统，计算机网络，人工智能；
+> - 工程实践，项目开发，软件使用，校招面试等等。
+> - 笔记皆为**Markdown**语法文档，可直接编辑修改。
+>
 
-- [Quick Start](https://tianqi.name/jekyll-TeXt-theme/docs/en/quick-start)
-- [Update from 1.x to 2.x](https://tianqi.name/jekyll-TeXt-theme/docs/en/update-from-1-to-2)
+***[Daily_Study_Code - 个人代码存档](https://gitee.com/yang-haoqing/daily_-study_-code)***
 
-### Customization
+> - 备份日常代码。
+> - 管理日常代码。
 
-- [Configuration](https://tianqi.name/jekyll-TeXt-theme/docs/en/configuration)
-- [Navigation](https://tianqi.name/jekyll-TeXt-theme/docs/en/navigation)
-- [Layouts](https://tianqi.name/jekyll-TeXt-theme/docs/en/layouts)
-- [Logo and Favicon](https://tianqi.name/jekyll-TeXt-theme/docs/en/logo-and-favicon)
-- [Authors](https://tianqi.name/jekyll-TeXt-theme/docs/en/authors)
-- [Internationalization](https://tianqi.name/jekyll-TeXt-theme/docs/en/i18n)
+***[Daily_file_backup - 日常文件备份](https://gitee.com/yang-haoqing/daily_file_backup)***
 
-### Content
+> - 备份日常文件。
 
-- [Writing Posts](https://tianqi.name/jekyll-TeXt-theme/docs/en/writing-posts)
-- [Additional styles](https://tianqi.name/jekyll-TeXt-theme/docs/en/additional-styles)
-- [Extensions](https://tianqi.name/jekyll-TeXt-theme/docs/en/extensions)
-- [Markdown Enhancements](https://tianqi.name/jekyll-TeXt-theme/docs/en/markdown-enhancements)
 
-## Demo Pages
 
-| Name | Description |
-| --- | --- |
-| [Home](https://tianqi.name/jekyll-TeXt-theme/test/) | Home page |
-| [Archive](https://tianqi.name/jekyll-TeXt-theme/archive.html) | Archive page |
-| [Layout Examples](https://tianqi.name/jekyll-TeXt-theme/samples.html) | Examples for different layouts |
+#### :book: **学习格言**
 
-## License
+- *书籍是人类进步的阶梯。  -  高尔基*
+- *学知不足，业精于勤。 - 韩愈*
+- *博学之，审问之，慎思之，明辨之，笃行之。 - 《礼记》*
 
-TeXt Theme is [MIT licensed](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/LICENSE).
+
+
+#### **🚀 知识技能**
+
+***编程语言***
+
+> - `C / C++ / 汇编  ——  ★★★`
+> - `Makefile & Shell & (CMake/GCC/GDB/Git/Valgrind/SSH)  ——  ★★`
+> - `Java / Python / VB / Matlab  ——  ★`
+>
+
+***工程软件***
+
+> - `LabView & Multisim & AutoCAD & SolidWorks ——  ★★`
+> - `Altium Designer & Proteus  ——  ★`
+
+***知识基础***
+
+> - 计算机操作系统  ——  ★★★
+> - 计算机组成原理  ——  ★★★
+> - 计算机网络  ——  ★★★
+
+
+
+#### **📋 版权声明**
+
+- ***仓库内容仅作为学习交流使用，其中部分内容可能来自网络，如涉及作品内容、版权和其它问题，请联系我进行处理，感谢。***
+
+
+
+#### **🔨 内卷口号**
+
+- ***God helps those who help themselves.***
+
+
+
+#### **🐼 关于皓清**
+
+- ***A xxxxx boy.***
+
+
+
+#### **🎅咨询交流**
+
+- ***QQ : 970407688***
+- ***Email : haoqingboy@163.com***
+
+
+
+#### **🍖  友情赞助**
+
+- ***Alipay : 970407688@qq.com***
+
+
+
+#### **🥉 致谢**
+
+- ***Heaven rewards diligence.***
+
+
+
+#### **:orange_book: 勘误与转载**
+
+- ***Welcome. Please leave a message if you have any questions.***
+- ***欢迎光临，~~一键三连~~，给个star！***
+
