@@ -4,7 +4,7 @@ tags: HQ-Introduce
 article_header:
   type: cover
   image:
-    src: /_photo/9.jpg
+    src: /9.jpg
 ---
 
 

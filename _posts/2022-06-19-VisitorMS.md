@@ -4,7 +4,7 @@ tags: RaspberryPi-project
 article_header:
   type: cover
   image:
-    src: /_photo/5.jpg
+    src: /5.jpg
 ---
 
 
