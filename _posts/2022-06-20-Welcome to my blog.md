@@ -1,5 +1,5 @@
 ---
-title: Welcome to my blog - 个人博客介绍
+title: Welcome to my blog - 博客介绍
 tags: HQ-Introduce
 article_header:
   type: cover
