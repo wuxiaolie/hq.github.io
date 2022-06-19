@@ -30,8 +30,8 @@ key: page-about
 
 #### **📝个人网站**
 
-- ***个人博客 - https://wuxiaolie.github.io/hq.github.io/***
-- ***CSDN博客 - https://blog.csdn.net/weixin_45346142***
+- ***个人博客 - https://wuxiaolie.github.io/hq.github.io/（不定时更新）***
+- ***CSDN博客 - https://blog.csdn.net/weixin_45346142（不再更新）***
 - ***Gitee仓库 - https://gitee.com/yang-haoqing/***
 - ***GitHub仓库 - https://github.com/wuxiaolie***
 
