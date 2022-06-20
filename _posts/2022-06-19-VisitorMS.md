@@ -9,7 +9,7 @@ article_header:
 
 
 
-**注：项目详细介绍、使用方法，项目结构图、思维导图、开发流程、组织架构等，请点击链接[进入仓库](https://gitee.com/yang-haoqing/visitor-ms)查看**
+## **注：项目开源资料，请点击链接 [进入仓库](https://gitee.com/yang-haoqing/visitor-ms) 下载**
 
 ------
 
@@ -89,6 +89,10 @@ article_header:
 - 聊天室功能 – 系统在线用户可进行公聊/私聊，允许并发连接，通讯过程实现数据加密。
 
 **项目 Git 仓库**
+
+【[GitHub链接-https://github.com/wuxiaolie/VisitorMS](https://github.com/wuxiaolie/VisitorMS)】
+
+【[Gitee链接-https://gitee.com/yang-haoqing/visitor-ms.git](https://gitee.com/yang-haoqing/visitor-ms)】
 
 ```
 # Gitee
