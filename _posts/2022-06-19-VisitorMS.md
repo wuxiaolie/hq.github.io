@@ -9,11 +9,15 @@ article_header:
 
 
 
-## **注：项目开源资料，请点击链接 [进入仓库](https://gitee.com/yang-haoqing/visitor-ms) 下载**
+## **项目开源资料，请点击链接 [进入仓库](https://gitee.com/yang-haoqing/visitor-ms) 下载**
 
 ------
 
 ![image-20220618162536377](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220618162536377.png)
+
+## 项目演示视频（B站）
+
+***【[VisitorMS - 访客管理控制系统展示](https://www.bilibili.com/video/BV1Ha411x7uf?spm_id_from=444.41.list.card_archive.click&vd_source=6f6160c3a4d7186779286fa1dd3d0a02)】***
 
 ## 项目博文（个人博客）
 
