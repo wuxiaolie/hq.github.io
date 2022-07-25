@@ -206,18 +206,6 @@ article_header:
 
 
 
-## 实现细节 & 难点记录
-
-1. 下面内容来自《从0实现基于Socket聊天室》。
-
-   > ![image-20220525204650835](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220525204650835.png)
-
-2. ==系统中的chat部分，具有线程加锁解锁功能，需要好好理解。==
-
-
-
-
-
 
 ---
 

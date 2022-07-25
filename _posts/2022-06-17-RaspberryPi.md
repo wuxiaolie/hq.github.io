@@ -61,13 +61,7 @@ export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/ga
 source /home/CLC/.bashrc 加载配置文件，马上生效配置。
 ```
 
-> ![img](../../../知识汇总/0 - 个人学习/1 - 工程实践/校招树莓派项目开发/【5】树莓派驱动开发/assets/bf23abb9335c7529fe25d8eb3ffa5024-42710)
-
 将安装路径添加到PATH中，添加到.bashrc的结尾即可
-
-> ![img](../../../知识汇总/0 - 个人学习/1 - 工程实践/校招树莓派项目开发/【5】树莓派驱动开发/assets/a3538b7515fa89f7810eff02416638ae-62196)
-
-> ![img](../../../知识汇总/0 - 个人学习/1 - 工程实践/校招树莓派项目开发/【5】树莓派驱动开发/assets/6c7d0cf21d41865a112762b2a5de831e-9882)
 
 ### 交叉编译使用举例
 

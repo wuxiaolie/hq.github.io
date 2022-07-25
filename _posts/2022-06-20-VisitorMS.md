@@ -618,24 +618,6 @@ pi@raspberrypi:~/raspberry/VisitorMS $ tree
 
 【一口Linux公众号 - chat聊天室项目】
 
-### 参考课程 
-
-【上官可编程嵌入式Linux树莓派课程】
-
-> ![image-20220406172224049](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220406172224049.png)
->
-> ![image-20220406172158665](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220406172158665.png)
->
-> ![image-20220406172135263](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/image-20220406172135263.png)
-
-
-
-
-
-
-
-
-
 
 
 

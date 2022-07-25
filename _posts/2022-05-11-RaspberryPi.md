@@ -156,7 +156,7 @@ int main（int argc， char const *argv［］）
 　　gcc -o test test.o -lncursesw
 ```
 
-接着运行 。/test
+接着运行 `./test`
 
 发现中文可以正常打印了
 

@@ -13,7 +13,7 @@ article_header:
 
 #### 注意
 
-- 问题咨询
+- 关于Linux中socket网络通讯，本项目只测试了同一个局域网中的设备，如果要运行在公网下，需要配置NAT DDNS，将服务器开发到公网中。（下图为咨询博主一口Linux大佬）
 
   >![Snipaste_2022-06-14_10-50-12](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/useSnipaste_2022-06-14_10-50-12.png)
 

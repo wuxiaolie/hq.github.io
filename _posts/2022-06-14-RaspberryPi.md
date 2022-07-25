@@ -344,7 +344,7 @@ main函数即主线程，它的主要任务如下：
 
 > ![图片](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/use640-16514548097806.png)
 
-由上图可见，==每一个客户端连接server后，server都要创建一个专门的thread负责和该客户端的通信；每一个客户端和server都有一对固定的fd组合用于连接。==
+由上图可见，每一个客户端连接server后，server都要创建一个专门的thread负责和该客户端的通信；每一个客户端和server都有一对固定的fd组合用于连接。
 
 
 
