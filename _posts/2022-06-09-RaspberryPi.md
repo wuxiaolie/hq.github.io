@@ -1,677 +1,653 @@
 ---
-title: 树莓派开发 - libcurl库实现人脸识别
+title: 树莓派开发 - MJPG-Streamer视频框架
 tags: RaspberryPi-use
 article_header:
   type: cover
   image:
-    src: https://photo-hq.oss-cn-hangzhou.aliyuncs.com/cover/11.png
+    src: https://photo-hq.oss-cn-hangzhou.aliyuncs.com/cover/12.png
 ---
 
 
 
-------
+## MJPG-Streamer 
 
-## 人脸识别方案
+### MJPG-Streamer 是什么？
 
-**技术平台**
+简单地说，Mjpg-Streamer 是一个 JPEG 文件的传输流。
 
-- 百度OCR
-- 腾讯云OCR
-- 商汤科技OCR
-- 翔云OCR
-- 科大讯飞OCR
+它最常用的**用途就是采集摄像头的数据，然后启动 http server，用户就可以通过浏览器查看图像数据了。**
 
-使用libcurl库调用翔云API进行人脸识别。
-
-**翔云API文档**
-
-> ![image-20220517152811863](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/useimage-20220517152811863.png)
->
-> ![image-20220517152824195](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/useimage-20220517152824195.png)
-
-
-
-
-
-## libcurl库使用方法
-
-### 使用步骤
-
-1. 调用curl_global_init()初始化libcurl
-2. 调用curl_easy_init()函数得到 easy interface型指针
-3. 调用curl_easy_setopt()设置传输选项
-4. 根据curl_easy_setopt()设置的传输选项，实现回调函数以完成用户特定任务
-5. 调用curl_easy_perform()函数完成传输任务
-6. 调用curl_easy_cleanup()释放内存
-7. 调用curl_global_cleanup()析构libcurl
-
-**在整过过程中设置curl_easy_setopt()参数是最关键的**，几乎所有的libcurl程序都要使用它。
-
-在基于LibCurl的程序里，**主要采用callback function （回调函数）的形式完成传输任务**，用户在启动传输前设置好各类参数和回调函数，当满足条件时libcurl将调用用户的回调函数实现特定功能。
-
-### 安装步骤
-
-解压
+类似 Linux 下的管道：
 
 ```
-tar xvf curl-7.71.1.tar.bz2 
+$ cat /dev/videoX | encode to JPG | http_server 
 ```
 
-建立一个安装目录（可以不用新建文件夹，make install安装的时候会自动创建）
+**官网**：
+
+> https://sourceforge.net/projects/mjpg-streamer/
+
+**Github**：
+
+> https://github.com/jacksonliam/mjpg-streamer
+
+**什么是 MJPG？**
+
+Motion JPEG，简称 MJPG。
+
+JPEG是静态图片的编码格式。
+
+MJPG 是动态的视频编码格式，可以简单地理解：MJPG 就是把多个 JPEG 图片连续显示出来。
+
+**MJPG 的优点？**
+
+很多摄像头本身就支持 JPEG、MJPG，所以处理器不需要做太多处理。
+
+一般的低性能处理器就可以传输 MJPG 视频流。
+
+**MJPG 的缺点？**
+
+MJPG 只是多个 JPEG 图片的组合，它不考虑前后两帧数据的变化，总是传输一帧完整的图像，传输带宽要求高。
+
+H264 等视频格式，会考虑前后两帧数据的变化，只传输变化的数据，传输带宽要求低。
+
+**个人感受：**
+
+这个项目虽然已经多年不更新了，但是却一直有人使用，说明其代码品质较好。
+
+符合 UNIX 的设计哲学：简单实用。
+
+同时，项目的整体设计清晰，扩展性好，可读性高，**非常适合用来训练 Linux 系统下的网络和多线程编程。**
+
+
+
+
+
+### MJPG-Streamer 怎么用？
+
+MJPG-Streamer的依赖很少。
+
+**编译很简单**：
 
 ```
-mkdir _install 
+$ sudo apt-get install cmake libjpeg8-dev
+$ make
 ```
 
-#### 普通安装（无ssl功能，只能用来访问http的网页，建议添加ssl功能安装）
-
-使用默认gcc编译/安装在当前路径的_install文件夹中,$PWD代表是当前路径
+**最常见的用法**：
 
 ```
-./configure --prefix=$PWD/_install  
+$ export LD_LIBRARY_PATH=`pwd`
+$ ./mjpg_streamer -i "input_uvc.so -d /dev/video2 -r 640x480 -f 30" -o "output_http.so -w www"
+ i: Using V4L2 device.: /dev/video0
+ i: Desired Resolution: 1920 x 1080
+ i: Frames Per Second.: 30
+ i: Format............: JPEG
+ o: www-folder-path......: ./www/
+ o: HTTP TCP port........: 8080
 ```
 
-使用arm-linux交叉编译器编译/安装在当前路径的_install文件夹中**（如果不需要交叉编译，这步跳过）**
+MJPG-Streamer 将图像的来源视为输入，将图像的展示视为输出。
+
+**每一种输入或输出是都抽象为一个插件。**
+
+上面的例子中：
+
+- -i 指定输入的插件为 input_uvc.so，此插件会从摄像头中采集图像。
+
+- 子参数 -d 指定设备节点、-r 指定分辨率、-f 指定 fps。
+
+
+- -o 指定输出的插件为 output_http.so，此插件会启动一个 http server。
+
+MJPG-Streamer 启动后，在浏览器中输入：
 
 ```
-./configure --prefix=$PWD/_install --host=arm-linux   
+127.0.0.1:8080
 ```
 
-安装
+就可以看到图像了。
 
-```
-make  编译当前文件夹的内容
-make install 安装
-```
 
-#### 添加ssl功能安装（人脸识别/车牌识别是通过https访问，必须要添加ssl功能）
 
-由于翔云API使用的是https，所以libcurl库安装编译的时候需要ssl库。
 
-即先在ubuntu中安装好ssl库，然后再编译安装libcurl库。
 
-[ssl库安装参考博文 - 已摘录到笔记末尾](https://www.cnblogs.com/jsjliyang/p/10606908.html)  
+###  MJPG-Streamer 怎么实现的？
 
-> ![Snipaste_2022-05-25_11-05-11](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/useSnipaste_2022-05-25_11-05-11.png)
+想要理解 MJPG-Streamer 的核心设计，要抓住 2个要点：
 
-```
-wget https://www.openssl.org/source/openssl-1.1.1a.tar.gz
-tar xvf openssl-1.1.1a.tar.gz
-cd openssl-1.1.1a/
-./config
-make
-make install
-```
+**1、工作模型**。
 
-进入安装目录中，卸载安装文件，重新编译安装libcurl库
+> ![图片](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/use640-16501669121321.png)
 
-```
-cd _install  
-rm * -rf
-./configure --prefix=$PWD/_install --with-ssl  # 重新编译
-make
-make install
+MJPG-Streamer 工作时，除了 main 线程，还会起 2 个线程。
+
+输入插件的线程 A 负责从摄像头采集一帧数据，暂存在 buffer 中。
+
+输出插件的线程 B 负责实现 http server，当有 http client 要求访问时图像时，从 buffer 中读一帧数据，然后发送给 http client。
+
+**2、如何实现插件化**。
+
+MJPG-Streamer 将每一种输入或输出是都抽象为一个插件。
+
+每一个插件，都必须实现 3 个 API:
+
+```c
+int (*init)(output_parameter *param, int id);
+
+int (*run)(int);
+
+int (*stop)(int);
 ```
 
-### 编译
+- init() 负责初始化插件;
 
--I（大i）是链接头文件，-L是链接库文件
 
-```
-gcc test_1.c -I ~/daily/libcurl/curl-7.71.1/_install/include/ -L ~/daily/libcurl/curl-7.71.1/_install/lib/ -lcurl
-```
+- stop() 负责让插件停止工作;
 
-如果提示找不到库，则修改环境变量，导入链接库地址（不修改的话，程序运行时可能报错）
 
-```
-export LD_LIBRARY_PATH=~/daily/libcurl/curl-7.71.1/_install/lib/  
-```
+- run() 负责让插件开始工作;
 
-程序运行后，会在/tmp/下生成`get.html`和`post.html`文件
 
-```
-vi /tmp/get.html   # 查看调用libcurl编程访问的百度主页
-```
+每一个插件，最终都会被编译成一个动态库。
 
-### 其他指令
+- main 线程中通过 dlopen、dlsym() 对插件进行统一地调度使用。
 
-**图片转换指令**
 
-base64是网络上最常见的用于传输8Bit字节码的编码方式之一，base64是一种基于64个可打印字符来表示二进制数据的方法。
+**核心数据结构：**
 
-base64是从二进制到字符的过程，可用于在HTTP环境下传递较长的标识信息。
+1、对输入插件的抽象
 
-```
-base64 shishi.jpg  //将图片转换为base64编码
-system("base 64 shishi.jpg > tmpFile")；  //将图片转换并存到\新建tmpFile文件中
-```
-
-
-
-
-
-## 例程代码
-
-### 程序代码 - 原始测试程序
-
-读取百度的网址内容并返回到readData函数然后输出
-
-```cpp
-#include <stdio.h>
-#include <curl/curl.h>
-#include <string.h>
-
-#define true 1
-#define false 0
-typedef unsigned int bool;  // C语言中没有bool
-
-size_t readData(void *ptr, size_t size, size_t nmemb, void *stream)
-{
-    char buf[1024] = {'\0'};
-    strncpy(buf, ptr, 1024);
-    printf("===========================================");
-    printf("%s\n", buf);
-}
-
-bool getUrl(char *filename)
-{
-    CURL *curl;
-    CURLcode res;
-    FILE *fp;
-    if ((fp = fopen(filename, "w")) == NULL) // 返回结果用文件存储
-        return false;
-    struct curl_slist *headers = NULL;
-    headers = curl_slist_append(headers, "Accept: Agent-007");
-    curl = curl_easy_init(); // 初始化
-    if (curl)
-    {
-        // curl_easy_setopt(curl, CURLOPT_PROXY, "10.99.60.201:8080");// 代理
-        curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers); // 改协议头
-        curl_easy_setopt(curl, CURLOPT_URL, "http://www.baidu.com");
-        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, readData); //调用回调函数readData，将返回的数据发给readData
-                                                                 //    curl_easy_setopt(curl, CURLOPT_WRITEDATA, fp); //将返回的http头输出到fp指向的文件
-                                                                 //    curl_easy_setopt(curl, CURLOPT_HEADERDATA, fp); //将返回的html主体数据输出到fp指向的文件
-        res = curl_easy_perform(curl);                           // 执行
-        if (res != 0)
-        {
-
-            curl_slist_free_all(headers);
-            curl_easy_cleanup(curl);
-        }
-        fclose(fp);
-        return true;
-    }
-}
-
-bool postUrl(char *filename)
-{
-    CURL *curl;
-    CURLcode res;
-    FILE *fp;
-    if ((fp = fopen(filename, "w")) == NULL)
-        return false;
-    curl = curl_easy_init();
-    if (curl)
-    {
-        curl_easy_setopt(curl, CURLOPT_COOKIEFILE, "/tmp/cookie.txt");                   // 指定cookie文件
-        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, "&logintype=uid&u=xieyan&psw=xxx86"); // 指定post内容
-        // curl_easy_setopt(curl, CURLOPT_PROXY, "10.99.60.201:8080");
-        curl_easy_setopt(curl, CURLOPT_URL, " http://mail.sina.com.cn/cgi-bin/login.cgi "); // 指定url
-        curl_easy_setopt(curl, CURLOPT_WRITEDATA, fp);
-        res = curl_easy_perform(curl);
-        curl_easy_cleanup(curl);
-    }
-    fclose(fp);
-    return true;
-}
-
-int main(void)
-{
-    getUrl("/tmp/get.html");
-    postUrl("/tmp/post.html");
-}
-```
-
-
-
-### 程序代码 - 人脸识别 - 未优化
-
-功能说明：输入两张图片，进行比较，是否为同一个人，程序未优化，返回的数据为原始数据，未处理
-
-> ![image-20220517202359960](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/useimage-20220517202359960.png)
->
-> ![image-20220517202338086](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/useimage-20220517202338086.png)
-
-```cpp
-#include <stdio.h>
-#include <curl/curl.h>
-#include <string.h>
-#include <stdlib.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <unistd.h>
-
-#define true 1
-#define false 0
-typedef unsigned int bool;
-
-size_t readData(void *ptr, size_t size, size_t nmemb, void *stream)
-{
-    char buf[10240] = {'\0'};
-    strncpy(buf, ptr, 10240);
-    printf("===============================Get Data==================================\n");
-    printf("%s\n", buf);
-}
-
-bool postUrl()
-{
-    CURL *curl;
-    CURLcode res;
-    char img1[12];
-    char img2[12];
-
-    //调用api需要的传参
-    char *key = "QEgxgMoZNAVjg4jyL1WGxx";
-    char *secret = "fc7420fe2eed4f8b8406f0f19fdc4xxx";
-    int typeId = 21;
-    char *format = "xml";
-    char *postString;
-
-    system("base64 shishi1.jpg > tmpFile");
-    int fd = open("./tmpFile", O_RDWR);
-    int filelen = lseek(fd, 0, SEEK_END); //计算文件大小
-    lseek(fd, 0, SEEK_SET);               //移动光标重新回到开头
-    char *bufpic1 = (char *)malloc(filelen + 2);
-    system("base64 shishi1.jpg > tmpFile");
-    memset(bufpic1, 0, filelen + 2); //清空
-    read(fd, bufpic1, filelen);
-    close(fd);
-
-    system("base64 shishi2.jpg > tmpFile");
-    fd = open("./tmpFile", O_RDWR);
-    filelen = lseek(fd, 0, SEEK_END);
-    //移动光标
-    lseek(fd, 0, SEEK_SET);
-    char *bufpic2 = (char *)malloc(filelen + 2);
-    memset(bufpic2, 0, filelen + 2);
-    read(fd, bufpic2, filelen);
-    close(fd);
-
-    int len = strlen(key) + strlen(secret) + strlen(bufpic1) + strlen(bufpic2) + 124;
-    postString = (char *)malloc(len);
-    memset(postString, '\0', len);
-    //拼接字符串
-    sprintf(postString, "&img1=%s&img2=%s&key=%s&secret=%s&typeId=%d&format=%s",
-            bufpic1, bufpic2, key, secret, 21, format);
-
-    curl = curl_easy_init();
-    if (curl)
-    {
-        curl_easy_setopt(curl, CURLOPT_COOKIEFILE, "/tmp/cookie.txt");            // 指定cookie文件
-        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, postString);                   // 指定post内容
-        curl_easy_setopt(curl, CURLOPT_URL, "https://netocr.com/api/faceliu.do"); // 指定url
-        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, readData);                  //调用函数readData，将返回的数据发给readData
-        res = curl_easy_perform(curl);
-        //打印返回值
-        printf("OK:%d\n", res);
-        curl_easy_cleanup(curl);
-    }
-    return true;
-}
-
-int main(void)
-{
-    postUrl();
-}
-```
-
-
-
-### 程序代码 - 人脸识别 - 优化
-
-功能说明：输入两张图片，进行比较，是否为同一个人，将重复代码封装成函数，程序优化过，返回是/否
-
-> ![image-20220517205016207](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/useimage-20220517205016207.png)
-
-```cpp
-#include <stdio.h>
-#include <curl/curl.h>
-#include <string.h>
-#include <stdlib.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <unistd.h>
-
-#define true 1
-#define false 0
-typedef unsigned int bool;
-char buf[10240] = {'\0'};
-
-size_t readData(void *ptr, size_t size, size_t nmemb, void *stream)
-{
-    strncpy(buf, ptr, 10240);
-}
-
-char *getPicBase64FromFile(char *filePath)
-{
-    char *bufPic;
-    char cmd[128] = {'\0'};
-
-    sprintf(cmd, "base64 %s > tmpFile", filePath);
-    system(cmd);
-
-    int fd = open("./tmpFile", O_RDWR);
-    int filelen = lseek(fd, 0, SEEK_END); //计算文件大小
-    lseek(fd, 0, SEEK_SET);               //移动光标重新回到开头
-    bufPic = (char *)malloc(filelen + 2);
-    memset(bufPic, '\0', filelen + 2); //清空
-    read(fd, bufPic, filelen);
-    close(fd);
-    system("rm -f tmpFile");  //把临时生成的文件删掉
-
-    return bufPic;
-}
-
-bool postUrl()
-{
-    CURL *curl;
-    CURLcode res;
-
-    char *key = "QEgxgMoZNAVjg4jyL1Wxxx";
-    char *secret = "fc7420fe2eed4f8b8406f0f19fdc4xxx";
-    int typeId = 21;
-    char *format = "xml";
-    char *postString;
-
-    char *bufPic1 = getPicBase64FromFile("./shishi1.jpg");
-    char *bufPic2 = getPicBase64FromFile("./shishi2.jpg");
-
-    int len = strlen(key) + strlen(secret) + strlen(bufPic1) + strlen(bufPic2) + 124;
-    postString = (char *)malloc(len);
-    memset(postString, '\0', len);
-    //拼接字符串
-    sprintf(postString, "&img1=%s&img2=%s&key=%s&secret=%s&typeId=%d&format=%s",
-            bufPic1, bufPic2, key, secret, 21, format);
-
-    curl = curl_easy_init();
-    if (curl)
-    {
-        curl_easy_setopt(curl, CURLOPT_COOKIEFILE, "/tmp/cookie.txt");            // 指定cookie文件
-        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, postString);                   // 指定post内容
-        curl_easy_setopt(curl, CURLOPT_URL, "https://netocr.com/api/faceliu.do"); // 指定url
-        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, readData);                  //调用函数readData，将返回的数据发给readData
-        res = curl_easy_perform(curl);
-
-        //打印返回值
-        printf("OK:%d\n", res);
-        if (strstr(buf, "是") != NULL) //查找字符串中是否含“是”
-        {
-            printf("This is the same person\n");
-        }
-        else
-        {
-            printf("This is the different person\n");
-        }
-        curl_easy_cleanup(curl);
-    }
-    return true;
-}
-
-int main(void)
-{
-    postUrl();
-}
-```
-
-
-
-### 程序代码 - 车牌识别
-
-功能说明：车牌识别，返回的是原始数据
-
-> ![image-20220517204927041](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/useimage-20220517204927041.png)
-
-```cpp
-#include <stdio.h>
-#include <curl/curl.h>
-#include <string.h>
-#include <stdlib.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <unistd.h>
-
-#define true 1
-#define false 0
-typedef unsigned int bool;
-char buf[10240] = {'\0'};
-
-size_t readData(void *ptr, size_t size, size_t nmemb, void *stream)
-{
-    strncpy(buf, ptr, 10240);
-    printf("=========================get data====================\n");
-    printf("%s\n", buf);
-}
-
-char *getPicBase64FromFile(char *filePath)
-{
-    char *bufPic;
-    char cmd[128] = {'\0'};
-
-    sprintf(cmd, "base64 %s > tmpFile", filePath);
-    system(cmd);
-
-    int fd = open("./tmpFile", O_RDWR);
-    int filelen = lseek(fd, 0, SEEK_END); //计算文件大小
-    lseek(fd, 0, SEEK_SET);               //移动光标重新回到开头
-    bufPic = (char *)malloc(filelen + 2);
-    memset(bufPic, '\0', filelen + 2); //清空
-    read(fd, bufPic, filelen);
-    close(fd);
-    system("rm -f tmpFile");
-
-    return bufPic;
-}
-
-bool postUrl()
-{
-    CURL *curl;
-    CURLcode res;
-
-    char *key = "QEgxgMoZNAVjg4jyL1WGxx";
-    char *secret = "fc7420fe2eed4f8b8406f0f19fdc4xxx";
-    int typeId = 19;
-    char *format = "xml";
-    char *postString;
-
-    char *bufPic1 = getPicBase64FromFile("./car1.jpg");
-
-    int len = strlen(key) + strlen(secret) + strlen(bufPic1) + 124;
-    postString = (char *)malloc(len);
-    memset(postString, '\0', len);
-    //拼接字符串
-    sprintf(postString, "&img=%s&key=%s&secret=%s&typeId=%d&format=%s",
-            bufPic1, key, secret, typeId, format);
-
-    curl = curl_easy_init();
-    if (curl)
-    {
-        curl_easy_setopt(curl, CURLOPT_COOKIEFILE, "/tmp/cookie.txt");             // 指定cookie文件
-        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, postString);                    // 指定post内容
-        curl_easy_setopt(curl, CURLOPT_URL, "https://netocr.com/api/recogliu.do"); // 指定url
-        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, readData);                   //调用函数readData，将返回的数据发给readData
-        res = curl_easy_perform(curl);
-
-        //打印返回值
-        printf("OK:%d\n", res);
-        if (strstr(buf, "是") != NULL) //查找字符串中是否含“是”
-        {
-            //    printf("This is the same person\n");
-        }
-        else
-        {
-            //    printf("This is the different person\n");
-        }
-        curl_easy_cleanup(curl);
-    }
-    return true;
-}
-
-int main(void)
-{
-    postUrl();
-}
-```
-
- 
-
-
-
-## Ubuntu18.04安装Openssl-1.1.1 - 摘录
-
-> https://www.cnblogs.com/jsjliyang/p/10606908.html
-
-#### 1.查看版本
-
-Ubuntu的版本是18.04。使用`openssl version`命令查看openssl版本，可以看到Ubuntu自带了openssl-1.1.0版本，因此安装新版本需要替换旧版本。
-![img](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/use1506992-20190327181410686-837332578.png)
-
-#### 2.下载openssl
-
-打开openssl官网的[下载页面](https://www.openssl.org/source/)可以看到最新的软件包，下载openssl-1.1.1b.tar.gz。放到Ubuntu系统中。
-![img](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/use1506992-20190327131237776-936271595.png)
-
-#### 3.解压和安装
-
-- 使用命令`tar -xzvf openssl-1.1.1b.tar.gz`解压。
-- 使用`cd openssl-1.1.1b`进入目录，并且使用`./config`生成MakeFile，不加任何参数，默认的安装位置为：`/usr/local/bin/openssl`。
-  ![img](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/use1506992-20190327181745576-2047062523.png)
-- 使用`make`进行编译
-- 不放心的话可以使用`make tset`检查一下（可选步骤）
-- 使用`sudo make install`进行安装，这里一定要选择root用户的权限执行。
-
-#### 4.备份与替换
-
-- 到上一步openssl就算安装好了，但是还无法使用，需要通过软链接的方式将新旧版本就行替换，依次运行下列命令。
-
-```bash
-sudo mv /usr/bin/openssl /usr/bin/openssl.old    //将旧版本的openssl进行备份
-sudo ln -s /usr/local/bin/openssl /usr/bin/openssl    //将新版本的openssl进行软链接
-cd /etc/   //进入etc目录
-su     //下一步一定要切换到root用户
-echo "/usr/local/lib" >> ld.so.conf    //将openssl的安装路径加入配置中
-ldconfig  //重新加载配置
-```
-
-- 使用`openssl version`查看，已经安装好。
-  ![img](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/use1506992-20190327213840495-1989406206.png)
-- 如果需要更换版本的话（一般也不会），修改软链接的名称即可，参照：
-
-```bash
-sudo mv /usr/bin/openssl /usr/bin/openssl.new
-sudo mv /usr/bin/openssl.old /usr/bin/openssl
-```
-
-#### 5.安装依赖库
-
-- openssl安装结束之后，需要安装依赖库才能够进行编程，使用`sudo apt-get install libssl-dev`安装依赖库，可以看到同时也下载了libssl-doc。
-  ![img](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/use1506992-20190327211829949-1270032746.png)
-- 由于下载的依赖库比较旧，我们在前面安装的openssl包中已经安装了新版本的库，因此需要将新旧库进行替换，仍然要做上一步的原因是尽量把能自动配置安装的东西安装好，只需要手动替换新的东西。下面是新旧库的对比（上面为新）：
-  ![img](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/use1506992-20190327211751990-1907438934.png)
-- 依次使用以下命令进行替换：
-
-```verilog
-sudo mv /usr/include/openssl /usr/include/openssl.old    //将旧版本进行备份
-sudo ln -s /usr/local/include/openssl /usr/include/openssl    //将新版本进行软链接
-```
-
-#### 6.测试
-
-编写一个测试代码test_openssl.c：
-
-```cpp
-#include <stdio.h>
-#include <openssl/evp.h>
-
-int main(){
+```c
+struct _input {
+    char *plugin;
     
-    OpenSSL_add_all_algorithms();
+    [...]
+
+    // 互斥访问
+    pthread_mutex_t db;
+    pthread_cond_t db_update;
+
+    // 存储图像数据
+    unsigned char *buf;
+    int size;
+
+    // 统一的 API
+    int (*init)(input_parameter *, int id);
+    int (*stop)(int);
+    int (*run)(int);
+};
+```
+
+2、对输出插件的抽象
+
+```c
+struct _output {
+    [...]
+
+    // 统一的 API
+    int (*init)(output_parameter *param, int id);
+    int (*stop)(int);
+    int (*run)(int);
+};
+```
+
+这两个数据结构基本就确定了 MPJG-Streamer的核心框架。
+
+如果你想了解 input_uvc.so 这个插件是如何采集摄像头数据的，那么只需要阅读其如何实现 init()、stop()、run() 这几个 API 即可。
+
+如果你想给 MJPG-Streamer 增加功能，例如你想让其支持使用 live555 进行流媒体传输，那么你需要先学会使用 live555，然后将其用法封装成 init()、stop()、run() 供 MJPG-Streamer 调用即可。
+
+### 总结
+
+MJPG-Streamer 虽然老旧，但是其设计理念遵循了 UNIX 的设计哲学，Keep it simple。
+
+
+
+
+
+## 树莓派摄像头配置流程
+
+> [摘自文章](https://jingyan.baidu.com/article/47a29f2474a555c01523994c.html)
+
+树莓派利用pi Camera模块，通过mjpg-streamer软件获取视频，通过手机端或电脑端浏览实时视频。
+
+### 步骤1
+
+1. sudo apt-get update  #更新软件列表
+
+   sudo apt-get upgrade #更新软件
+
+2. sudo apt-get install subversion #Subversion是一个自由开源的版本控制系统
+
+3. sudo apt-get install libjpeg8-dev #JPEG支持库
+
+   sudo apt-get install imagemagick
+
+   sudo apt-get install libv4l-dev  #4l是小写"L"
+
+   sudo apt-get install cmake #下载编译工具
+
+
+### 步骤2
+
+1. sudo apt-get install git
+
+2. git clone https://github.com/jacksonliam/mjpg-streamer.git
+
+   > <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/usea44e8afc508c9bced7e680c4d6dd884ce44afab0.jpg" alt="树莓派3B + Pi摄像头+mjpg-streamer" style="zoom:67%;" />
+
+3. cd mjpg-streamer/mjpg-streamer-experimental #进入下载目录后进入左侧路径
+
+
+### 步骤3
+
+1. make all #编译
+
+   > <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/use890dfb4a2f27e7ef3f1861b219dd3340b7f3f5b0.jpg" alt="树莓派3B + Pi摄像头+mjpg-streamer" style="zoom:67%;" />
+
+2. sudo make install #安装
+
+   > <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/use2e66f9ef28066b018bc339f33df39187021cf3b0.jpg" alt="树莓派3B + Pi摄像头+mjpg-streamer" style="zoom: 67%;" />
+
+3. 修改树莓派系统设置，打开摄像头，重启树莓派
+
+   `sudo raspi-config`
+
+   > ![image-20220514111001939](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/useimage-20220514111001939.png)
+   >
+   > ![image-20220514111018129](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/useimage-20220514111018129.png)
+
+4. 修改启动脚本 `vi start.sh` 
+
+   > ![image-20220514111111683](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/useimage-20220514111111683.png)
+
+5. 运行 `./start.sh` 此处因为没连接摄像头，提示失败
+
+   >![image-20220514111440602](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/useimage-20220514111440602.png)
+
+   其他参考方法
+
+   > `sudo mjpg_streamer -i "./input_uvc.so -r 640x480 -f 10 -n" -o "./output_http.so -p 8080 -w /usr/local/www" `
+   >
+   > 此命令尤为重要，如下图所示，输出信息，说明成功！
+   >
+   > <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/useb7b28f87031c99c0b0e2eb35af2fa872951fedb0.jpg" alt="树莓派3B + Pi摄像头+mjpg-streamer" style="zoom:67%;" />
+
+6. 在浏览器输入 `http://IP地址:8080`，回车 显示如下页面，点击页面左侧，Stream栏，显示监视画面
+
+   > <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/useaebdff86242fa872b701b457bfdaf05e4b23e9b0.jpg" alt="树莓派3B + Pi摄像头+mjpg-streamer" style="zoom:67%;" />
+
+
+
+
+
+## 【树莓派】网络视频监控 - 编程那些年
+
+> https://mp.weixin.qq.com/s/4-pMaQdpekXrVC7QFXE2Pw
+
+利用树莓派和CSI摄像头，通过两种常见方案，我们可以简单实现局域网内的实时视频监控，接下来就讲解下如何部署这两种方案。
+
+### 测试环境
+
+**硬件：**树莓派3B/3B+
+**系统：**Raspberry Debian 9 / Debian 10
+
+### 准备工作
+
+首先，按《[【树莓派】让你的SD卡快速扩容](http://mp.weixin.qq.com/s?__biz=MzkzMDE4MDM2NQ==&mid=2247483971&idx=1&sn=518b9e1bf8dce24754eb3cc00bd5ed55&chksm=c27f7e21f508f737583a9f06be5717ea241164806b70168b823d96fef2e4b2f98413c3427289&scene=21#wechat_redirect)》方法对SD卡进行扩容，防止空间不足的问题
+其次，根据《[【树莓派】CSI摄像头简单配置](http://mp.weixin.qq.com/s?__biz=MzkzMDE4MDM2NQ==&mid=2247484041&idx=1&sn=2e128e6df8726622a9eb11e65de66813&chksm=c27f7eebf508f7fdb293193eb8ed27231c488fa6ac8d88a3a67fbd603482ce0516483a565351&scene=21#wechat_redirect)》正确连接CSI摄像头，并保证能够正常拍照
+
+### 方案一、利用mjpg-streamer框架实现
+
+更新下树莓派的软件源
+
+```
+$ sudo apt update 
+```
+
+安装编译mjpg-streamer所需的依赖包
+
+```
+$ sudo apt install cmake libjpeg8-dev libv4l-dev   #libv4l是小写"L"
+```
+
+下载mjpg-streamer源码包并对其解压
+
+```
+$ wget https://github.com/Five-great/mjpg-streamer/archive/master.zip
+$ unzip  master.zip 
+$ cd mjpg-streamer-master/mjpg-streamer-experimental/
+```
+
+或者通过git命令直接下载最新的源码
+
+```
+$ git clone https://github.com/jacksonliam/mjpg-streamer.git --depth=1
+$ cd mjpg-streamer/mjpg-streamer-experimental 
+```
+
+对源码进行编译并安装
+
+```
+$ make
+$ sudo make install
+```
+
+对树莓派的摄像头节点进行确认
+
+```
+pi@raspberrypi:~/mjpg-streamer-master/mjpg-streamer-experimental $ ls /dev/video*
+/dev/video0  /dev/video10  /dev/video11  /dev/video12
+```
+
+如果存在video**(\*为数字,如video0)*的设备节点，说明可以走uvc通道，直接运行start.sh脚步即可。
+
+```
+pi@raspberrypi:~/mjpg-streamer-master/mjpg-streamer-experimental $ chmod +x start.sh
+pi@raspberrypi:~/mjpg-streamer-master/mjpg-streamer-experimental $ ./start.sh 
+MJPG Streamer Version: git rev: 4be5902ba243d597f8d642da5b5271f25e2fb44d
+ i: Using V4L2 device.: /dev/video0 #设备节点就是/dev/vide0
+ i: Desired Resolution: 640 x 480
+ i: Frames Per Second.: -1
+ i: Format............: JPEG
+ i: TV-Norm...........: DEFAULT
+省略。。。。
+ o: www-folder-path......: ./www/
+ o: HTTP TCP port........: 8080
+ o: HTTP Listen Address..: (null)
+ o: username:password....: disabled
+ o: commands.............: enabled
+```
+
+如果不存在video* *(***为数字，如video0)*的设备节点，则需要修改start.sh脚步，将input_uvc.so修改为input_raspicam.so， 如下：
+
+```
+pi@raspberrypi:~/mjpg-streamer-master/mjpg-streamer-experimental $  vi  startup.sh
+export LD_LIBRARY_PATH="$(pwd)"
+#./mjpg_streamer -i "input_uvc.so --help"
+
+#./mjpg_streamer -i "./input_uvc.so" -o "./output_http.so -w ./www"
+./mjpg_streamer -i "./input_raspicam.so" -o "./output_http.so -w ./www" #增加该字段
+#./mjpg_streamer -i "./input_uvc.so -n -f 30 -r 1280x960"  -o "./output_http.so -w ./www"
+#./mjpg_streamer -i "./input_uvc.so -n -f 30 -r 640x480 -d /dev/video0"  -o "./output_http.so -w ./www" &
+#./mjpg_streamer -i "./input_uvc.so -d /dev/video0" -i "./input_uvc.so -d /dev/video1" -o "./output_http.so -w ./www"
+#valgrind ./mjpg_streamer -i "./input_uvc.so" -o "./output_http.so -w ./www"
+```
+
+然后运行start.sh脚步即可。
+
+```
+pi@raspberrypi:~/mjpg-streamer-master/mjpg-streamer-experimental $ chmod +x start.sh
+pi@raspberrypi:~/mjpg-streamer-master/mjpg-streamer-experimental $ ./start.sh 
+MJPG Streamer Version.: 2.0
+ i: fps.............: 5
+ i: resolution........: 640 x 480
+ i: camera parameters..............:
+
+Sharpness 0, Contrast 0, Brightness 50
+Saturation 0, ISO 0, Video Stabilisation No, Exposure compensation 0
+Exposure Mode 'auto', AWB Mode 'auto', Image Effect 'none'
+Metering Mode 'average', Colour Effect Enabled No with U = 128, V = 128
+Rotation 0, hflip No, vflip No
+ROI x 0.000000, y 0.000000, w 1.000000 h 1.000000
+ o: www-folder-path......: ./www/
+ o: HTTP TCP port........: 8080
+ o: HTTP Listen Address..: (null)
+ o: username:password....: disabled
+ o: commands.............: enabled
+ i: Starting Camera
+Encoder Buffer Size 81920
+```
+
+然后打开浏览器，网址输入http://192.168.1.107:8080，即可看到监控视频效果:*（PS：192.168.1.107为树莓派IP，可通过ifconfig命令确认实际IP）*
+
+> ![image-20220514110638232](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/useimage-20220514110638232.png)
+
+此时，在树莓派上，可通过wget命令对视频进行截图，如下：
+
+```
+$ wget  http://192.168.1.107:8080/?action=snapshot -O ./image1.jpg 
+#这其中192.168.1.107为实际的ip，image1.jpg为要保存到的图片名称
+```
+
+**最后，可以创建并添加开机启动的配置文件，实现开机自动启动视频监控:**
+
+创建要使用的开机脚本
+
+```
+pi@raspberrypi:~ $ cd 
+pi@raspberrypi:~ $ vi test.sh  #/home/pi/test.sh路径
+
+#!/bin/bash
+
+cd  /home/pi/mjpg-streamer/mjpg-streamer-experimental/
+./start.sh
+```
+
+添加配置文件
+
+```
+pi@raspberrypi:/etc/xdg/autostart $ cd   /etc/xdg/autostart/
+pi@raspberrypi:/etc/xdg/autostart $ sudo cp xcompmgr.desktop  mjpg.desktop 
+pi@raspberrypi:/etc/xdg/autostart $sudo  vim.tiny  mjpg.desktop   
+
+[Desktop Entry]
+Type=Application
+Name=mjpeg-http
+Comment=Start mjpeg-http compositor
+NoDisplay=true
+Exec=/home/pi/test.sh
+
+保存退出，并重启树莓派。服务就会自动起来
+```
+
+### 方案二、利用VLC串流实时输出网络视频流
+
+首先安装VLC软件包
+
+```
+$ sudo apt update
+$ sudo apt install vlc # Raspberry Debian 10 可以不装
+```
+
+然后运行如下命令：
+
+```
+pi@raspberrypi:~ $ sudo raspivid -o - -t 0 -w 640 -h 360 -fps 25|cvlc -vvv stream:///dev/stdin --sout '#standard{access=http,mux=ts,dst=:8090}' :demux=h264 
+
+VLC media player 3.0.8 Vetinari (revision 3.0.8-0-gf350b6b5a7)
+[009b5b58] main libvlc debug: VLC media player - 3.0.8 Vetinari
+[009b5b58] main libvlc debug: Copyright © 1996-2019 the VideoLAN team
+[009b5b58] main libvlc debug: revision 3.0.8-0-gf350b6b5a7
+省略...
+[73600668] main input debug: Buffering 43%
+```
+
+即可开启raspivid视频捕捉并发送到VLC。
+
+在PC端安装VLC软件,下载地址如下：
+*(PS:偷懒的也可以在公众号后台回复"VLC"获取64位版本)*
+
+```
+https://www.videolan.org/
+```
+
+安装时，一路默认即可。
+
+最后打开安装好的VLC软件，选择**"媒体（M）->流（S）…->网络（N）"**，输入
+
+```
+http://192.168.1.107:8090 #192.168.1.107为树莓派实际IP
+```
+
+如下图所示：![图片](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+
+> ![图片](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/use640-16519971292811.png)
+>
+> ![图片](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/use640-16519971292822.png)
+>
+> ![image-20220508160755732](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/useimage-20220508160755732.png)
+>
+> ![图片](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/use640-16519971292823.png)
+>
+> ![图片](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/use640-16519971292824.png)
+>
+> ![图片](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/use640-16519971292825.png)
+
+等待一会即可播出树莓派捕捉的视频流。
+
+
+
+
+
+## 强大无比的嵌入式多媒体开发神器：SDL2
+
+### SDL 是什么？
+
+==SDL（Simple DirectMedia Layer）是一套开源的跨平台多媒体开发库，使用 C 语言写成。==
+
+它提供了绘制图像、播放声音、获取键盘输入等相关的 API，大大降低多媒体应用开发难度的同时，也让开发者只要用相同或是相似的代码就可以开发出跨多个平台（Linux、Windows、Mac OS X等）的应用软件。
+
+多用于开发游戏、模拟器、媒体播放器等多媒体应用领域。
+
+SDL 有两个常见版本：SDL1.2 和 SDL2.x。在不支持 OpenGL ES2 的嵌入式平台上，只能使用 SDL1.2，SDL2.x 依赖 OpengGL ES2。
+
+**官网**：
+
+> https://sourceforge.net/projects/mjpg-streamer/
+
+**Github**：
+
+> https://github.com/libsdl-org/SDL
+
+
+
+### 示例：显示图片
+
+```c
+ void main()
+ {
+    SDL_Window *window = SDL_CreateWindow("Hello World!", 100, 100, 640, 480, SDL_WINDOW_SHOWN);
     
+    /* Create a Render */
+    SDL_Renderer *render = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+    
+    /* Load bitmap image */
+    SDL_Surface *bmp = SDL_LoadBMP("./hello.bmp");
+    
+    SDL_Texture *texture = SDL_CreateTextureFromSurface(render, bmp);
+    SDL_FreeSurface(bmp);
+
+    SDL_RenderClear(render);
+    SDL_RenderCopy(render, texture, NULL, NULL); // Copy the texture into render
+    SDL_RenderPresent(render); // Show render on window
+
+    /* Free all objects*/
+    [...]
+
+    /* Quit program */
+    SDL_Quit();
     return 0;
 }
 ```
 
-然后用下面的命令编译：
-`gcc -o to test_openssl.c -L/usr/local/openssl/lib -lssl -lcrypto -ldl -lpthread`
-执行`./to;echo $?`，结果打印0。
-![img](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/use1506992-20190327211910323-1939190784.png)
+**要快速上手 SDL，需要理解下面几个核心结构体和 API：**
 
-#### 参考资料
+对于这些结构体，网上有各种各样的解释，但是都比较晦涩生硬，下面是我理解。
 
-- [Linux下OpenSSL的安装与使用](https://www.cnblogs.com/rocedu/p/5087623.html)
-- [解决引用openssl静态库libcrypto.a和libssl.a出现undefined reference to异常的有关问题](https://blog.csdn.net/azhangyi188/article/details/51063880)
+**SDL_Window**
 
+想要显示东西，首先要有一个容器来容纳程序绘制的内容。
 
+这个容器，最常见的就是窗口。
 
+对于 PC 机，一般都会有窗口的支持。
 
+但是即便是没有桌面环境的嵌入式平台，SDL_Window 也能兼容，只不过这个窗口没有最小化、最大化、拉伸的功能罢了，都是纯软件的概念，和硬件无关。
 
+一般只需要关注 x、y、w、h 4个成员变量，即窗口的原点坐标和宽高。
 
+通过 SDL_CreateWindow() 可以创建一个窗口。
 
+**SDL_Renderer**
 
+当描述用 GPU 来进行绘画图像时，就用术语渲染。
 
+渲染器，你可以认为就是画笔。
 
+现实世界里，你可以用圆珠笔来画画，也可以用铅笔来画画，所以渲染器也有多种类型，不同的渲染器就好比不同的笔。
 
+SDL2 支持的渲染器：
 
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/use640-16501670112644.png" alt="图片" style="zoom:50%;" />
 
+==在嵌入式平台上，一般就只支持 OpengGL ES2 这种渲染器类型。==
 
+通过 SDL_CreateRenderer() 可以创建一个渲染器。
 
+**SDL_Texture**
 
+渲染器有了之后，就轮到要渲染的内容了。
 
+Texture 负责描述渲染的内容。
 
+既然是要显示图像，自然需要像素数据、像素格式、宽度、高度、渲染器类型等信息，这些都包含在 Texture 里。
 
+最常见的情况：
+调用SDL_CreateTextureFromSurface() 基于某个 Surface 来创建 Texture。Surface 用于描述像素数据。
 
+**SDL_RenderCopy()/SDL_RenderPresent()**
 
+我们把内存想象成是一块备用的画布，而此时屏幕正在显示另一块画布的内容。
 
+你可以不断地调用 SDL_RenderCopy() 来往备用画布上画东西，无论你画多少次都可以。
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+只有当你调用 SDL_RenderPresent() 时，备用画布才会真正第切换到屏幕上。
 
 
 
+###  实践应用
+
+MJPG-Streamer 将每一种输入或输出是都抽象为一个插件。
+
+例如采集摄像头的功能被实现为一个输入插件， 而 http 视频流被实现为一个输出插件。
+
+==我们可以为 MJPG-Streamer 添加一个 SDL2 输出插件。==
+
+==这样就可以在本地显示屏上查看到浏览器的图像了==，效果如下：
+
+```
+$ ./mjpg_streamer -i "input_uvc.so /dev/video0 -r 640x480 -f 30" -o "output_sdl2.so"
+```
+
+代码很简单，核心内容就是使用 SDL2 显示 JPG 图片，代码就不贴了。
 
 
 
+###  内部实现
 
+最后，我想简单地看一下 SDL2 的内部实现。
 
+以最重要的显示功能为例。
 
+SDL2 将底层显示封装为 video driver：
 
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/use640-16501670112656.png" alt="图片" style="zoom:50%;" />
 
+我们比较熟悉的包括：Wayland、X11、KMSDRM。
 
+以 KMSDRM 这个 video driver 为例，为了支持这个显示驱动，需要实现这么多 API：
 
+> <img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/Raspberry/use640-16501670112657.png" alt="图片" style="zoom:50%;" />
 
+如果你想了解 SDL2 是如何实现屏幕显示的，可以尝试阅读这些 API。
 
+### 总结
+
+SDL2 的功能非常丰富，代码质量也很高。
+
+==如果你想在板子进行多媒体开发，例如显示一些东西，又不想用 Qt 那么庞大的图形框架，可以考虑基于 SDL2 进行开发。==
 
 
 

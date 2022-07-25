@@ -1,5 +1,5 @@
 ---
-title: 树莓派开发 - 基础使用教程整理
+title: 树莓派开发 - 基础使用教程
 tags: RaspberryPi-use
 article_header:
   type: cover
