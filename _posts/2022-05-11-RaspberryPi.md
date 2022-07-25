@@ -1,5 +1,5 @@
 ---
-title: 树莓派开发 - ncurses库开发
+title: 树莓派开发 - ncurses图形库开发
 tags: RaspberryPi-use
 article_header:
   type: cover

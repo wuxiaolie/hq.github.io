@@ -1,5 +1,5 @@
 ---
-title: 树莓派开发 - 贪吃蛇游戏开发
+title: 树莓派开发 - 贪吃蛇游戏开发(多线程)
 tags: RaspberryPi-use
 article_header:
   type: cover

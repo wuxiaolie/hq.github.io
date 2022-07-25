@@ -1,5 +1,5 @@
 ---
-title: 树莓派开发 - 驱动开发
+title: 树莓派开发 - 字符设备驱动开发
 tags: RaspberryPi-use
 article_header:
   type: cover

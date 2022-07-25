@@ -1,5 +1,5 @@
 ---
-title: 树莓派开发 - 应用开发
+title: 树莓派开发 - 简单工厂设计模式
 tags: RaspberryPi-use
 article_header:
   type: cover
@@ -11,9 +11,9 @@ article_header:
 
 ------
 
-# 智能家居项目
+# 简单工厂设计模式
 
-## 项目整体架构
+## 应用案例之智能家居
 
 智能家居功能结构图
 

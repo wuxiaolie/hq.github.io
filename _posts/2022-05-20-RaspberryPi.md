@@ -1,5 +1,5 @@
 ---
-title: 树莓派开发 - wiringPi库开发
+title: 树莓派开发 - wiringPi驱动库开发
 tags: RaspberryPi-use
 article_header:
   type: cover

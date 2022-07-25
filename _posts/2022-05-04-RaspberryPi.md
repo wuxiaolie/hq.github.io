@@ -1,5 +1,5 @@
 ---
-title: 树莓派开发 - libcurl库实现车牌识别
+title: 树莓派开发 - libcurl库实现人脸识别
 tags: RaspberryPi-use
 article_header:
   type: cover
