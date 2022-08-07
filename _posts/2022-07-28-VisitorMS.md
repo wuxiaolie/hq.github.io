@@ -85,6 +85,12 @@ article_header:
 >
 ><img src="https://photo-hq.oss-cn-hangzhou.aliyuncs.com/VisitorMS/%E8%AE%BF%E5%AE%A2%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%20%20%E5%8A%9F%E8%83%BD%E7%BB%84%E7%BB%87%E6%9E%B6%E6%9E%84.png" alt="访客管理系统  功能组织架构" style="zoom: 33%;" />
 
+### 第五版 - 2022.8.1（补充）
+
+**系统分层设计架构图**
+
+>![VisitorMS](https://photo-hq.oss-cn-hangzhou.aliyuncs.com/img/VisitorMS.png)
+
 
 
 
